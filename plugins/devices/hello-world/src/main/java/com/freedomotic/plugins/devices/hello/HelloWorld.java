@@ -64,7 +64,7 @@ public class HelloWorld
          * started with a right-click on plugin list on the desktop frontend
          * (com.freedomotic.jfrontend plugin)
          */
-        //bindGuiToPlugin(new HelloWorldGui(this));
+     //   bindGuiToPlugin(new HelloWorldGui(this));
     }
 
     @Override
