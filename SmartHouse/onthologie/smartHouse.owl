@@ -19,6 +19,12 @@
         <ObjectProperty IRI="#possede"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Palier"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#possedeLocalisation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Porte"/>
     </Declaration>
     <Declaration>
@@ -34,6 +40,9 @@
         <ObjectProperty IRI="#seTrouveDansJardin"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#pers1"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Binaire"/>
     </Declaration>
     <Declaration>
@@ -47,6 +56,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Salon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lampe1"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Chambre"/>
@@ -67,13 +79,22 @@
         <Class IRI="#Objets"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Cuisine1"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Telephone"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Climatiseur"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#palier"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Alarme"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pers2"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Etat"/>
@@ -100,10 +121,10 @@
         <ObjectProperty IRI="#JardinPossede"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Humidite"/>
+        <Class IRI="#Fournitures"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Fournitures"/>
+        <Class IRI="#Humidite"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#seTrouveDansSalon"/>
@@ -151,10 +172,10 @@
         <Class IRI="#Maison"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Fumee"/>
+        <ObjectProperty IRI="#possedeEtatIntervalle"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#possedeEtatIntervalle"/>
+        <Class IRI="#Fumee"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#SalonPossede"/>
@@ -167,6 +188,12 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#valeurIntervalle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#etatb1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#possedeEtat"/>
@@ -272,10 +299,6 @@
         <Class IRI="#Objets"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Localisation"/>
-        <Class IRI="#Maison"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Lumiere"/>
         <Class IRI="#Capteur"/>
     </SubClassOf>
@@ -288,7 +311,7 @@
         <Class IRI="#Capteur"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Objets"/>
+        <Class IRI="#Palier"/>
         <Class IRI="#Maison"/>
     </SubClassOf>
     <SubClassOf>
@@ -331,6 +354,80 @@
         <Class IRI="#Volet"/>
         <Class IRI="#Objets"/>
     </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Cuisine"/>
+        <NamedIndividual IRI="#Cuisine1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Binaire"/>
+        <NamedIndividual IRI="#etatb1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lampe"/>
+        <NamedIndividual IRI="#lampe1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Palier"/>
+        <NamedIndividual IRI="#palier"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Personne"/>
+        <NamedIndividual IRI="#pers1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Personne"/>
+        <NamedIndividual IRI="#pers2"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CuisinePossede"/>
+        <NamedIndividual IRI="#Cuisine1"/>
+        <NamedIndividual IRI="#lampe1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possedeEtatBinaire"/>
+        <NamedIndividual IRI="#lampe1"/>
+        <NamedIndividual IRI="#etatb1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#seTrouveDansCuisine"/>
+        <NamedIndividual IRI="#lampe1"/>
+        <NamedIndividual IRI="#Cuisine1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#possedeLocalisation"/>
+        <NamedIndividual IRI="#palier"/>
+        <NamedIndividual IRI="#Cuisine1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#presenteDans"/>
+        <NamedIndividual IRI="#pers1"/>
+        <NamedIndividual IRI="#Cuisine1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#Cuisine1"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">cuisine1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#valeurBinaire"/>
+        <NamedIndividual IRI="#etatb1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#palier"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">palier1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#pers1"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">pers1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nom"/>
+        <NamedIndividual IRI="#pers2"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">pers2</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#BainPossede"/>
         <ObjectProperty IRI="#possede"/>
@@ -464,6 +561,10 @@
         <Class IRI="#Lampe"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#possedeLocalisation"/>
+        <Class IRI="#Palier"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#presenteDans"/>
         <Class IRI="#Personne"/>
     </ObjectPropertyDomain>
@@ -534,6 +635,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#possedeEtatIntervalle"/>
         <Class IRI="#Intervalle"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#possedeLocalisation"/>
+        <Class IRI="#Localisation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#presenteDans"/>
@@ -602,6 +707,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#horraireTv"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#nom"/>
