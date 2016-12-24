@@ -15,7 +15,7 @@ pmd.setting
 # Java specific #
 #################
 *.class
-*.jar
+
 *.war
 *.ear
 
@@ -34,7 +34,7 @@ pmd.setting
 #########################
 *.log
 *.csv
-*.txt
+
 *.TXT
 *.html
 *.HTML
