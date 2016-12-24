@@ -1,0 +1,94 @@
+SELECT ?per ?age
+WHERE {
+	 ?per rdf:type ns:Homme.
+	 ?per ns:nom "John".
+	 ?per ns:age ?age   	
+}
+
+SELECT ?per ?parents
+WHERE {
+	 ?per rdf:type ns:Femme.
+	 ?per ns:nom "Chloé".
+	 ?per ns:estFilleDe ?parents   	
+}
+
+SELECT ?per
+WHERE {
+	 ?per rdf:type ns:Personne.
+}
+
+SELECT ?per ?age
+WHERE {
+	 ?per rdf:type ns:Femme.
+	 ?per ns:age ?age.
+	 FILTER (?age>30)
+}
+
+SELECT ?per1 ?pers2 
+WHERE {
+	 ?per1 ns:estFrereDe ?per2
+	   	
+}
+
+SELECT ?per ?nat
+WHERE {
+	 ?per rdf:type ns:Enfant.
+	 ?per ns:nationalite ?nat   	
+}
+
+SELECT ?per ?nat
+WHERE {
+	 ?per rdf:type ns:Enfant.
+	 ?per ns:nationalite ?nat   	
+}
+
+
+
+[rule2: (?per rdf:type ns:Homme) (?per ns:estFilsDe ?parent)  -> (?per rdf:type ns:Enfant) (?parent rdf:type ns:Parent)]
+[rule3: (?per rdf:type ns:Femme) (?per ns:estFilleDe ?parent)  -> (?per rdf:type ns:Enfant) (?parent rdf:type ns:Parent)]
+
+[rule4: (?per rdf:type ns:Homme) (?per rdf:type ns:Parent)  -> (?per rdf:type ns:Pere)]
+[rule5: (?per rdf:type ns:Femme) (?per rdf:type ns:Parent)  -> (?per rdf:type ns:Mere)]
+
+[rule6: (?per1 rdf:type ns:Homme) (?per2 rdf:type ns:Homme) (?per1 ns:estFilsDe ?parent) (?per2 ns:estFilsDe ?parent) notEqual(?per1,?per2)
+	-> (?per2 ns:estFrereDe ?per1) (?per1 ns:estFrereDe ?per2) (?per1 rdf:type ns:Frere) (?per2 rdf:type ns:Frere)] 
+[rule7: (?per1 rdf:type ns:Femme) (?per2 rdf:type ns:Femme) (?per1 ns:estFilleDe ?parent) (?per2 ns:estFilleDe ?parent) notEqual(?per1,?per2)
+	-> (?per2 ns:estSoeurDe ?per1) (?per1 ns:estSoeurDe ?per2) (?per1 rdf:type ns:Soeur) (?per2 rdf:type ns:Soeur)]
+[rule8: (?per1 rdf:type ns:Femme) (?per2 rdf:type ns:Homme) (?per1 ns:estFilleDe ?parent) (?per2 ns:estFilsDe ?parent) 
+	-> (?per2 ns:estFrereDe ?per1) (?per1 ns:estSoeurDe ?per2) (?per1 rdf:type ns:Soeur) (?per2 rdf:type ns:Frere)]
+
+[rule9: (?oncle rdf:type ns:Homme) (?parent rdf:type ns:Parent) (?enfant rdf:type ns:Enfant) (?oncle ns:estFrereDe ?parent) (?enfant ns:estFilsDe ?parent)  
+	-> (?oncle ns:estOncleDe ?enfant) (?oncle rdf:type ns:Oncle)]
+[rule10: (?oncle rdf:type ns:Homme) (?parent rdf:type ns:Parent) (?enfant rdf:type ns:Enfant) (?oncle ns:estFrereDe ?parent) (?enfant ns:estFilleDe ?parent)  
+	-> (?oncle ns:estOncleDe ?enfant) (?oncle rdf:type ns:Oncle)]
+
+
+[rule11: (?grandMere rdf:type ns:Femme) (?parent rdf:type ns:Parent) (?enfant rdf:type ns:Enfant) (?enfant ns:estFilsDe ?parent) (?parent ns:estFilsDe ?grandMere)
+	-> (?grandMere ns:estGrandMereDe ?enfant) (?grandMere rdf:type ns:GrandMere)]
+[rule12: (?grandMere rdf:type ns:Femme) (?parent rdf:type ns:Parent) (?enfant rdf:type ns:Enfant) (?enfant ns:estFilsDe ?parent) (?parent ns:estFilleDe ?grandMere)
+	-> (?grandMere ns:estGrandMereDe ?enfant) (?grandMere rdf:type ns:GrandMere)]
+[rule13: (?grandMere rdf:type ns:Femme) (?parent rdf:type ns:Parent) (?enfant rdf:type ns:Enfant) (?enfant ns:estFilleDe ?parent) (?parent ns:estFilsDe ?grandMere)
+	-> (?grandMere ns:estGrandMereDe ?enfant) (?grandMere rdf:type ns:GrandMere)]
+[rule14: (?grandMere rdf:type ns:Femme) (?parent rdf:type ns:Parent) (?enfant rdf:type ns:Enfant) (?enfant ns:estFilleDe ?parent) (?parent ns:estFilleDe ?grandMere)
+	-> (?grandMere ns:estGrandMereDe ?enfant) (?grandMere rdf:type ns:GrandMere)]
+
+
+[rule15: (?grandPere rdf:type ns:Homme) (?parent rdf:type ns:Parent) (?enfant rdf:type ns:Enfant) (?enfant ns:estFilsDe ?parent) (?parent ns:estFilsDe ?grandPere)
+	-> (?grandPere ns:estGrandPereDe ?enfant) (?grandPere rdf:type ns:GrandPere)]
+[rule16: (?grandPere rdf:type ns:Homme) (?parent rdf:type ns:Parent) (?enfant rdf:type ns:Enfant) (?enfant ns:estFilsDe ?parent) (?parent ns:estFilleDe ?grandPere)
+	-> (?grandPere ns:estGrandPereDe ?enfant) (?grandPere rdf:type ns:GrandPere)]
+[rule17: (?grandPere rdf:type ns:Homme) (?parent rdf:type ns:Parent) (?enfant rdf:type ns:Enfant) (?enfant ns:estFilleDe ?parent) (?parent ns:estFilsDe ?grandPere)
+	-> (?grandPere ns:estGrandPereDe ?enfant) (?grandPere rdf:type ns:GrandPere)]
+[rule18: (?grandPere rdf:type ns:Homme) (?parent rdf:type ns:Parent) (?enfant rdf:type ns:Enfant) (?enfant ns:estFilleDe ?parent) (?parent ns:estFilleDe ?grandPere)
+	-> (?grandPere ns:estGrandPereDe ?enfant) (?grandPere rdf:type ns:GrandPere)]
+
+
+[rule19: (?enfant rdf:type ns:Enfant) (?parent rdf:type ns:Parent) (?enfant ns:estFilsDe ?parent) (?parent ns:nationalite ?natParent)
+	-> (?enfant ns:nationalite ?natParent)] 
+[rule20: (?enfant rdf:type ns:Enfant) (?parent rdf:type ns:Parent) (?enfant ns:estFilleDe ?parent) (?parent ns:nationalite ?natParent)
+	-> (?enfant ns:nationalite ?natParent)]
+
+
+[rule21: (?per rdf:type ns:Homme) -> (?per rdf:type ns:Personne)]
+[rule22: (?per rdf:type ns:Femme) -> (?per rdf:type ns:Personne)]
+[rule23: (?per rdf:type ns:Personne) (?per ns:age ?age) greaterThan(?age, 60)   ->  (?per rdf:type ns:PersonneAge)]

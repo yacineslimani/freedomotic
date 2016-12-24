@@ -1,0 +1,540 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#"
+     xml:base="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Famille-ontology="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estEnRelationDeFraterieAvec -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estEnRelationDeFraterieAvec">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estEnfantDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estEnfantDe">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estParentDe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estFilleDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estFilleDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estEnfantDe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Femme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estFilsDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estFilsDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estEnfantDe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Homme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estFrereDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estFrereDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estEnRelationDeFraterieAvec"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Homme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estMereDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estMereDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estParentDe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Femme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estParentDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estParentDe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estPereDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estPereDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estParentDe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Homme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estSoeurDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estSoeurDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estEnRelationDeFraterieAvec"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Femme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#se_marier_avec -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#se_marier_avec">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#age">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#nationalite -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#nationalite">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#nom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#nom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Enfant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Enfant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Femme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Femme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Homme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Fille -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Fille">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estFilleDe"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Enfant"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Fils"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Fils -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Fils">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estFilsDe"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Enfant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Fraterie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Fraterie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Frere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Frere">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estFrereDe"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Fraterie"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Homme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#GrandMere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#GrandMere">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estMereDe"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Parent"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Femme"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#GrandParent"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#GrandPere"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#GrandParent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#GrandParent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#GrandPere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#GrandPere">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estPereDe"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Parent"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#GrandParent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Homme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Homme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Homme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Jeune -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Jeune">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Mere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Mere">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estMereDe"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Femme"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Parent"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Pere"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Oncle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Oncle">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estFrereDe"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Parent"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Homme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Parent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Parent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Pere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Pere">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estPereDe"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Homme"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Parent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#PersonneAge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#PersonneAge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Personne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Soeur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Soeur">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#estSoeurDe"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Femme"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Fraterie"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Alex -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Alex">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Femme"/>
+        <se_marier_avec rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Thomas"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</age>
+        <nom>Alex</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Chloé -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Chloé">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Femme"/>
+        <estFilleDe rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Marie"/>
+        <estFilleDe rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Peter"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+        <nom>Chloé</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Claude -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Claude">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Femme"/>
+        <estFilleDe rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Sylvie"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</age>
+        <nationalite>française</nationalite>
+        <nom>Claude</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Jean -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Jean">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Homme"/>
+        <estFilsDe rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#John"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</age>
+        <nationalite>anglaise</nationalite>
+        <nom>Jean</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#John -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#John">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Homme"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</age>
+        <nationalite>anglaise</nationalite>
+        <nom>John</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Marie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Marie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Femme"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">69</age>
+        <nationalite>française</nationalite>
+        <nom>Marie</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Micheal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Micheal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Homme"/>
+        <estFilsDe rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Alex"/>
+        <estFilsDe rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Thomas"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</age>
+        <nom>Micheal</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Paul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Paul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Homme"/>
+        <estFilsDe rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Peter"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</age>
+        <nom>Paul</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Peter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Peter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Homme"/>
+        <se_marier_avec rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Marie"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</age>
+        <nationalite>française</nationalite>
+        <nom>Peter</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Sylvie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Sylvie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Femme"/>
+        <estFilleDe rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Marie"/>
+        <estFilleDe rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Peter"/>
+        <se_marier_avec rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#John"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</age>
+        <nom>Sylvie</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Thomas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Thomas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Homme"/>
+        <estFilsDe rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Peter"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</age>
+        <nationalite>française</nationalite>
+        <nom>Thomas</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Tom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Tom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Homme"/>
+        <estFilsDe rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Alex"/>
+        <estFilsDe rdf:resource="http://www.semanticweb.org/nacer&amp;samir/ontologies/2016/10/Famille-ontology#Thomas"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</age>
+        <nom>Tom</nom>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

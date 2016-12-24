@@ -1,0 +1,6 @@
+@prefix ns: <http://www.owl-ontologies.com/Ontology1291196007.owl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+
+@include <OWL>.
+
+[rule1: (?a ns:estEnfantDe ?c) (?b ns:estEnfantDe ?c) -> (?a ns:estEnRelationDeFratrieAvec ?b)] 
