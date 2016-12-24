@@ -6,6 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/ohb/ontologies/2016/11/untitled-ontology-14">
+    <Prefix name="" IRI="http://www.semanticweb.org/ohb/ontologies/2016/11/untitled-ontology-14#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -24,10 +25,10 @@
         <Class IRI="#Personne"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Arroseur"/>
+        <Class IRI="#Garage"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Garage"/>
+        <Class IRI="#Arroseur"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#seTrouveDansJardin"/>
@@ -61,9 +62,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Localisation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#possedeEtatValeur"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Objets"/>
@@ -102,10 +100,10 @@
         <ObjectProperty IRI="#JardinPossede"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Fournitures"/>
+        <Class IRI="#Humidite"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Humidite"/>
+        <Class IRI="#Fournitures"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#seTrouveDansSalon"/>
@@ -123,19 +121,22 @@
         <ObjectProperty IRI="#presenteDans"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Gaz"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#seTrouveDansGarage"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Piece"/>
+        <Class IRI="#Gaz"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Intervalle"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Piece"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Lampe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#possedeEtatBinaire"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Temperature"/>
@@ -150,13 +151,10 @@
         <Class IRI="#Maison"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#possedeEtatIntervalle"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Fumee"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#valeurLumiere"/>
+        <ObjectProperty IRI="#possedeEtatIntervalle"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#SalonPossede"/>
@@ -169,9 +167,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#valeurIntervalle"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#possedeEtatHorraire"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#possedeEtat"/>
@@ -187,9 +182,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#TV"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#valeurTemp"/>
     </Declaration>
     <Declaration>
         <Class IRI="#TvPref"/>
@@ -364,15 +356,11 @@
         <ObjectProperty IRI="#possede"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#possedeEtatHorraire"/>
+        <ObjectProperty IRI="#possedeEtatBinaire"/>
         <ObjectProperty IRI="#possedeEtat"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#possedeEtatIntervalle"/>
-        <ObjectProperty IRI="#possedeEtat"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#possedeEtatValeur"/>
         <ObjectProperty IRI="#possedeEtat"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -460,8 +448,20 @@
         <Class IRI="#Objets"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#possedeEtatBinaire"/>
+        <Class IRI="#Objets"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#possedeEtatIntervalle"/>
-        <Class IRI="#Intervalle"/>
+        <Class IRI="#Chauffage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#possedeEtatIntervalle"/>
+        <Class IRI="#Climatiseur"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#possedeEtatIntervalle"/>
+        <Class IRI="#Lampe"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#presenteDans"/>
@@ -528,6 +528,14 @@
         <Class IRI="#Etat"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#possedeEtatBinaire"/>
+        <Class IRI="#Binaire"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#possedeEtatIntervalle"/>
+        <Class IRI="#Intervalle"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#presenteDans"/>
         <Class IRI="#Localisation"/>
     </ObjectPropertyRange>
@@ -580,11 +588,11 @@
         <Class IRI="#Intervalle"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#valeurLumiere"/>
+        <DataProperty IRI="#valeurIntervalle"/>
         <Class IRI="#LumierePref"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#valeurTemp"/>
+        <DataProperty IRI="#valeurIntervalle"/>
         <Class IRI="#TemperaturePref"/>
     </DataPropertyDomain>
     <DataPropertyRange>
@@ -605,14 +613,6 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#valeurIntervalle"/>
-        <Datatype abbreviatedIRI="xsd:int"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#valeurLumiere"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#valeurTemp"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
 </Ontology>
