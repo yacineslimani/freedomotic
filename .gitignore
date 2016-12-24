@@ -25,7 +25,7 @@ pmd.setting
 *.dmg
 *.gz
 *.iso
-*.jar
+
 *.rar
 *.tar
 *.zip
@@ -35,7 +35,7 @@ pmd.setting
 *.log
 *.csv
 
-*.TXT
+
 *.html
 *.HTML
 *.sql
