@@ -17,7 +17,7 @@
  * Freedomotic; see the file COPYING. If not, see
  * <http://www.gnu.org/licenses/>.
  */
-package com.freedomotic.plugins.devices.hello;
+package com.freedomotic.plugins.devices.smartHouse;
 
 import com.freedomotic.api.EventTemplate;
 import com.freedomotic.api.Protocol;
@@ -30,14 +30,15 @@ import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
 /**
  *
  * @author Mauro Cicolella
  */
-public class HelloWorld
+public class SmartHouse
         extends Protocol {
 
-    private static final Logger LOG = LoggerFactory.getLogger(HelloWorld.class.getName());
+    private static final Logger LOG = LoggerFactory.getLogger(SmartHouse.class.getName());
     final int POLLING_WAIT;
 
     @Inject
@@ -46,9 +47,9 @@ public class HelloWorld
     /**
      *
      */
-    public HelloWorld() {
+    public SmartHouse() {
         //every plugin needs a name and a manifest XML file
-        super("HelloWorld", "/hello-world/hello-world-manifest.xml");
+        super("SmartHouse", "/smartHouse/smartHouseManifest.xml");
         //read a property from the manifest file below which is in
         //FREEDOMOTIC_FOLDER/plugins/devices/com.freedomotic.hello/hello-world.xml
         POLLING_WAIT = configuration.getIntProperty("time-between-reads", 2000);
@@ -76,6 +77,7 @@ public class HelloWorld
 
     @Override
     protected void onRun() {
+       
         for (EnvObjectLogic thing : thingsRepository.findAll()) {
             LOG.info("HelloWorld sees Thing: {}", thing.getPojo().getName());
         }
