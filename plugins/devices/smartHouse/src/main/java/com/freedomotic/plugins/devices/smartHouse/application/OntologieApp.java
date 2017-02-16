@@ -15,10 +15,10 @@ import com.freedomotic.plugins.devices.smartHouse.tools.JenaEngine;
  *
  * @author DO.ITSUDPARIS
  */
-public class Main {
+public class OntologieApp {
    // public static final String ns = "http://www.semanticweb.org/nacer&samir/ontologies/2016/10/Famille-ontology#";
 	
-		public static final String ns = "http://www.semanticweb.org/nacer/ontologies/smartHome#";
+	public static final String ns = "http://www.semanticweb.org/nacer/ontologies/smartHome#";
 	public static String inputDataOntology = "data/smartHome.owl";
     public static String inputRule = "data/rules.txt";
     public static String inputQuery = "data/query.txt";
@@ -28,26 +28,21 @@ public class Main {
      * @param args rhe command line arguments
      */
 
-    public static void main(String[] args){
+    public void createInstance(String cls ,String value, String uuid){
         Model model = JenaEngine.readModel(inputDataOntology);
         Model inferedModel = JenaEngine.readInferencedModelFromRuleFile(model, inputRule);
-        JenaEngine.updateValueOfDataTypeProperty(inferedModel, ns, "Peter", "age", 10);
-        JenaEngine.updateValueOfObjectProperty(inferedModel, ns, "Peter", "estFilsDe", "Femme1");
-        JenaEngine.createInstanceOfClass(model, ns, "Person", "yacine");
-       JenaEngine.addValueOfDataTypeProperty(inferedModel, ns, "yacine","hasName", "yacineg");
+        
+        JenaEngine.createInstanceOfClass(model, ns, cls, value);
+        JenaEngine.addValueOfDataTypeProperty(inferedModel, ns, value,"hasName", value);
+        
+        
         // JenaEngine.updateValueOfDataTypeProperty(inferedModel, ns, "yacine", "hasName", "yacine");
         //query on the model
         System.out.println(JenaEngine.executeQueryFile(inferedModel, inputQuery));
        // System.out.println(JenaEngine.executeQueryFile(inferedModel, inputQuery2));
        
         
-        Scanner sc = new Scanner(System.in);
-        String nom="";
-        System.out.println("Donner le nom :) :");
-        nom=sc.nextLine();
-        System.out.println("nom =" + nom);
-        
-        System.out.println(JenaEngine.executeQueryFileWithParameter(inferedModel, inputQuery, nom));
+       
     }
 
 }

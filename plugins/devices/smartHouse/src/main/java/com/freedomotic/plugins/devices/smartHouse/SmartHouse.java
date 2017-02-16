@@ -28,6 +28,7 @@ import com.freedomotic.events.ZoneHasChanged;
 import com.freedomotic.exceptions.UnableToExecuteException;
 import com.freedomotic.model.ds.Config;
 import com.freedomotic.model.geometry.FreedomPoint;
+import com.freedomotic.plugins.devices.smartHouse.application.OntologieApp;
 import com.freedomotic.things.EnvObjectLogic;
 import com.freedomotic.things.ThingRepository;
 import com.freedomotic.reactions.Command;
@@ -101,37 +102,51 @@ public class SmartHouse
     @Override
     protected void onRun(){
 
-          for (EnvObjectLogic thing : thingsRepository.findAll()) {
+       /*   for (EnvObjectLogic thing : thingsRepository.findAll()) {
             LOG.info("HelloWorld sees Thing 1: {}", thing.getPojo().getName());
             LOG.info("HelloWorld sees Thing 2: {}", thing.getPojo().getClass());
             LOG.info("HelloWorld sees Thing 2: {}", thing.getPojo().getType());
+           
+            if(thing instanceof )
             
-        }
+            
+        }*/
+          
+          
+          
       
-    /*  for (EnvObjectLogic object : getApi().things().findAll()) {
+      for (EnvObjectLogic object : getApi().things().findAll()) {
           
           
         //  System.out.println("Object Name : "+object.getPojo().getName());
         //  System.out.println("Object Class : "+object.getClass());
           
-            if (object instanceof ElectricDevice) {
-                ElectricDevice device = (ElectricDevice) object;
+           if (object.getClass().toString().equals("class com.freedomotic.things.impl.Person")) {
+             //   ElectricDevice device = (ElectricDevice) object;
+        	   OntologieApp  ontologieApp =new OntologieApp();
+        	   ontologieApp.createInstance("Person", object.getPojo().getName(), object.getPojo().getUUID());
+        	   
+                System.out.println("device Name : "+ object.getPojo().getName());
+                System.out.println("device Environment : "+object.getClass().toString());
+                System.out.println("device id : "+object.getPojo().getUUID());
+                System.out.println("location : "+object.getPojo().getEnvironmentID());
+                System.out.println("-------------------------------------");
+                
+                
             //    FreedomPoint location = randomLocation();
                 
            //     LocationEvent event = new LocationEvent(this, person.getPojo().getUUID(), location);
           //      notifyEvent(event);
          // System.out.println("je reconnais un electicDivice");
-          device.setRandomLocation();
-          Config c = new Config();
+       //   device.setRandomLocation();
+       //   Config c = new Config();
           
           
-          System.out.println("device Name : "+ device.getPojo().getName());
-          System.out.println("device Environment : "+device.getClass()+"\n");
-          System.out.println("-------------------------------------");
+         
           
           
             }
-        }*/
+        }
         
     }
 

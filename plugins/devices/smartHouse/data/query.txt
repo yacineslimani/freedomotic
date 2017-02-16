@@ -6,9 +6,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX tg:<http://www.turnguard.com/functions#>
 
 
-SELECT  ?user ?nom
+SELECT  ?user ?nom 
 WHERE {
  ?user rdf:type ns:Person.
  ?user ns:hasName ?nom.
+ 
+ 
 
 }
