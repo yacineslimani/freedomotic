@@ -234,12 +234,32 @@
     
 
 
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#hasEffect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#hasEffect">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#isEffectOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Function"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnEnvironment"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#hasEnvironment -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#hasEnvironment">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#isEnvironmentOf"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Location"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Environment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#hasFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#hasFunction">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#isFunctionOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Function"/>
     </owl:ObjectProperty>
     
 
@@ -305,11 +325,39 @@
     
 
 
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#isEffectOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#isEffectOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnEnvironment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Function"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#isEnvironmentOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#isEnvironmentOf">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Environment"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#isFunctionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#isFunctionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Function"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#isFunctionOff -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#isFunctionOff">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Function"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Device"/>
     </owl:ObjectProperty>
     
 
@@ -325,55 +373,36 @@
     
 
 
-    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#PreferenceValue -->
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#hasAge -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#PreferenceValue">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Preference"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#age -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#age">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#hasAge">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#deviceStatus -->
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#hasFloorNo -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#deviceStatus">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Device"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#environmentvalue -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#environmentvalue">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Environment"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#floorNo -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#floorNo">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#hasFloorNo">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Indoor"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#id -->
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#hasId -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#id">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#hasId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Location"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#hasName">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Location"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -381,12 +410,35 @@
     
 
 
-    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#name -->
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#hasPreferenceValue -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#name">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Location"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Person"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#hasPreferenceValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Preference"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#hasSemanticValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#hasSemanticValue"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#hasSensorValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#hasSensorValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Environment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#isEffecting -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#isEffecting">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -442,6 +494,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#ChannelDown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#ChannelDown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#ChannelUp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#ChannelUp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Function"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#Curtain -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Curtain">
@@ -472,6 +540,108 @@
     
 
 
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnBrightDown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnBrightDown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnBrightUp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnBrightUp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnCarbonMonoxideDown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnCarbonMonoxideDown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnCarbonMonoxideUp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnCarbonMonoxideUp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnEnvironment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnEnvironment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnHumidityDown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnHumidityDown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnHumidityUp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnHumidityUp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnSmogDown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnSmogDown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnSmogUp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnSmogUp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnTemperateurDown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnTemperateurDown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnTemperateurUp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnTemperateurUp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnVoiceDown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnVoiceDown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnVoiceUp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnVoiceUp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#EffectOnEnvironment"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#Environment -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Environment"/>
@@ -483,6 +653,12 @@
     <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Fan">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Device"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#Function -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Function"/>
     
 
 
@@ -542,10 +718,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#HumidityDown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#HumidityDown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Function"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#HumidityPreference -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#HumidityPreference">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Preference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#HumidityUp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#HumidityUp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Function"/>
     </owl:Class>
     
 
@@ -624,6 +816,38 @@
     
 
 
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#SwitchOff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#SwitchOff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#SwitchOn -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#SwitchOn">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#TemperateurDown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#TemperateurDown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#TemperateurUp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#TemperateurUp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Function"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#Temperature -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Temperature">
@@ -656,10 +880,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#VoiceDown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#VoiceDown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Function"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#VoicePreference -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#VoicePreference">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Preference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#VoiceUp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#VoiceUp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Function"/>
     </owl:Class>
     
 
@@ -715,11 +955,19 @@
     
 
 
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#adel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#adel">
+        <hasName>bombom</hasName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#nacer -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#nacer">
         <rdf:type rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Person"/>
-        <name>nacer</name>
+        <hasName>selmen</hasName>
     </owl:NamedIndividual>
 </rdf:RDF>
 

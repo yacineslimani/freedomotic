@@ -99,15 +99,16 @@ public class SmartHouse
     }
 
     @Override
-    protected void onRun() {
+    protected void onRun(){
 
-        /*  for (EnvObjectLogic thing : thingsRepository.findAll()) {
+          for (EnvObjectLogic thing : thingsRepository.findAll()) {
             LOG.info("HelloWorld sees Thing 1: {}", thing.getPojo().getName());
             LOG.info("HelloWorld sees Thing 2: {}", thing.getPojo().getClass());
+            LOG.info("HelloWorld sees Thing 2: {}", thing.getPojo().getType());
             
-        }*/
+        }
       
-      for (EnvObjectLogic object : getApi().things().findAll()) {
+    /*  for (EnvObjectLogic object : getApi().things().findAll()) {
           
           
         //  System.out.println("Object Name : "+object.getPojo().getName());
@@ -130,7 +131,7 @@ public class SmartHouse
           
           
             }
-        }
+        }*/
         
     }
 

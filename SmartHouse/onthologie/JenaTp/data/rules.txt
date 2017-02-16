@@ -1,0 +1,18 @@
+@prefix ns: <http://www.semanticweb.org/nacer&samir/ontologies/2016/10/Famille-ontology#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>. 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+
+[rule1: (?per rdf:type ns:Femme) (?per ns:estFilleDe ?parent)-> (?per ns:EF ?parent)]
+
+[rule1: (?per rdf:type ns:Homme) (?per ns:estFilsDe ?parent)-> (?per ns:EF ?parent)]
+
+[rule3: (?per rdf:type ns:Homme) (?per1 rdf:type ns:Femme) -> (?per rdf:type ns:Personne) (?per1 rdf:type ns:Personne)]
+
+[rule6: (?per1 rdf:type ns:Homme) (?per2 rdf:type ns:Homme) (?per1 ns:estFilsDe ?parent) (?per2 ns:estFilsDe ?parent) notEqual(?per1,?per2)
+	-> (?per2 ns:estFrereDe ?per1) (?per1 ns:estFrereDe ?per2) (?per1 rdf:type ns:Frere) (?per2 rdf:type ns:Frere)] 
+[rule7: (?per1 rdf:type ns:Femme) (?per2 rdf:type ns:Femme) (?per1 ns:estFilleDe ?parent) (?per2 ns:estFilleDe ?parent) notEqual(?per1,?per2)
+	-> (?per2 ns:estSoeurDe ?per1) (?per1 ns:estSoeurDe ?per2) (?per1 rdf:type ns:Soeur) (?per2 rdf:type ns:Soeur)]
+[rule8: (?per1 rdf:type ns:Femme) (?per2 rdf:type ns:Homme) (?per1 ns:estFilleDe ?parent) (?per2 ns:estFilsDe ?parent) 
+	-> (?per2 ns:estFrereDe ?per1) (?per1 ns:estSoeurDe ?per2) (?per1 rdf:type ns:Soeur) (?per2 rdf:type ns:Frere)]
