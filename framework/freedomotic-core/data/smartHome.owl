@@ -464,6 +464,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#Bathroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Bathroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Indoor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#BathroomSmall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#BathroomSmall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Indoor"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#Bedroom -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Bedroom">
@@ -538,6 +554,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Door">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#Dressroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Dressroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Indoor"/>
     </owl:Class>
     
 
@@ -782,6 +806,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#Office -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Office">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Indoor"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#Outdoor -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Outdoor">
@@ -806,14 +838,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Smog">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Environment"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#Studyroom -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Studyroom">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Indoor"/>
     </owl:Class>
     
 
@@ -874,6 +898,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#Upstairs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Upstairs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Indoor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#Utilityroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Utilityroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Indoor"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#Voice -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Voice">
@@ -910,14 +950,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Washer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Device"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/nacer/ontologies/smartHome#Washroom -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/nacer/ontologies/smartHome#Washroom">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/nacer/ontologies/smartHome#Indoor"/>
     </owl:Class>
     
 
