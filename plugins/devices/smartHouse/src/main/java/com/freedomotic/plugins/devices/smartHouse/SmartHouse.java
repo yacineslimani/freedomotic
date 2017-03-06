@@ -21,27 +21,36 @@ package com.freedomotic.plugins.devices.smartHouse;
 
 import com.freedomotic.api.EventTemplate;
 import com.freedomotic.api.Protocol;
+import com.freedomotic.behaviors.BehaviorLogic;
+import com.freedomotic.environment.EnvironmentLogic;
+import com.freedomotic.environment.Room;
 import com.freedomotic.events.LocationEvent;
 import com.freedomotic.events.MessageEvent;
 import com.freedomotic.events.ObjectHasChangedBehavior;
+import com.freedomotic.events.PersonEntersZone;
 import com.freedomotic.events.ZoneHasChanged;
 import com.freedomotic.exceptions.UnableToExecuteException;
 import com.freedomotic.model.ds.Config;
 import com.freedomotic.model.geometry.FreedomPoint;
+import com.freedomotic.model.object.Behavior;
+import com.freedomotic.model.object.EnvObject;
 import com.freedomotic.plugins.devices.smartHouse.application.OntologieApp;
+import com.freedomotic.plugins.devices.smartHouse.tools.JenaEngine;
 import com.freedomotic.things.EnvObjectLogic;
 import com.freedomotic.things.ThingRepository;
 import com.freedomotic.reactions.Command;
 import com.freedomotic.things.GenericPerson;
-import com.freedomotic.things.impl.ElectricDevice;
+import com.freedomotic.things.impl.*;
 import com.google.inject.Inject;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import com.freedomotic.events.LuminosityEvent;
 
 /**
  *
@@ -55,7 +64,7 @@ public class SmartHouse
 
     @Inject
     private ThingRepository thingsRepository;
-
+    OntologieApp app= new OntologieApp();
     /**
      *
      */
@@ -99,60 +108,157 @@ public class SmartHouse
         setDescription("My GUI is now hidden");
     }
 
+    
+    protected Room getObjLocation(EnvObjectLogic p){
+    	for(EnvironmentLogic flate: getApi().environments().findAll()){
+       	 for(Room room : flate.getRooms()){
+        
+                for( EnvObject obj : room.getPojo().getObjects() ){
+                	/*obj.getSimpleType().equals("user")*/ 
+               	if( obj.getUUID() == p.getPojo().getUUID()){
+               		
+               		return (Room)room;
+               	 }
+                }
+                
+       	 }
+        }
+       return null;
+    }
+    
+    protected Person getPerson(){
+    	for (EnvObjectLogic object : getApi().things().findAll()) {
+               if (object.getClass().toString().equals("class com.freedomotic.things.impl.Person")) {
+            	   return (Person)object;
+                }
+    	}
+    	return null;
+    }
+    
+    
+    protected Light getLightsIn(Room room){
+    	String hey="";
+    	String hehey="";
+  
+                   for( EnvObject obj : room.getPojo().getObjects() ){
+                  	
+                  	if( obj.getSimpleType().equals("light")){
+                  		hehey=obj.getUUID();
+                  	 }
+                  	
+                   }
+    	for (EnvObjectLogic object : getApi().things().findAll()) {
+            if (object.getClass().toString().equals("class com.freedomotic.things.impl.Light")) {
+               Light l = (Light)object;
+               hey = l.getPojo().getUUID();
+               if(hey.equals(hehey))
+         	   return (Light)object;
+               
+             }
+    	}
+    	
+    	return null;
+    }
+    
+    protected void saveInOntologie(){
+    	
+    	
+    	//rooms
+    	for(EnvironmentLogic flate: getApi().environments().findAll()){
+          	 for(Room room : flate.getRooms()){	 
+             	app.createRoomInstance(room.getPojo().getName() ,room.getPojo().getName().replaceAll(" ", ""), room.getPojo().getUuid());
+            	app.createObjectInstance("Brightness" ,room.getPojo().getName()+"Brightness","hasSensorValue", "0");
+            	app.createObjectInstance("Temperature" ,room.getPojo().getName()+"Temperature","hasSensorValue", "10");
+            	
+            	app.createObjectRelInstance(room.getPojo().getName(), "hasEnvironement", room.getPojo().getName()+"Brightness");
+            	app.createObjectRelInstance(room.getPojo().getName(), "hasEnvironement", room.getPojo().getName()+"Temperature");
+
+            	//and more...
+                 
+          	 }
+           }
+    	
+    	
+    	
+    	
+    	//object and person
+    	for (EnvObjectLogic object : getApi().things().findAll()) {
+            if (object.getClass().toString().equals("class com.freedomotic.things.impl.Person")) {
+            	
+            	app.createPersonInstance("Person" ,object.getPojo().getName(), object.getPojo().getUUID());
+            	//ajouter personne
+            	Room r = getObjLocation(object);
+            	app.createObjectRelInstance(object.getPojo().getName(), "hasLocation", r.getPojo().getName());
+            	
+            }else
+            if (object.getClass().toString().equals("class com.freedomotic.things.impl.Light")){
+            	Room r = getObjLocation(object);
+            	
+            	//ajouter light
+            	app.createObjectInstance("Light" ,object.getPojo().getName(), "hasId",object.getPojo().getUUID());
+            	app.createObjectRelInstance(object.getPojo().getName(), "hasLocation", r.getPojo().getName());
+            	//ajouter env brightness
+
+            	//fonctions
+            	app.createObjectInstance("SwitchOn" ,object.getPojo().getName()+"-OnFct","IsEnabeled", "False");
+            	app.createObjectInstance("SwitchOff" ,object.getPojo().getName()+"-OffFct","IsEnabeled", "True");
+
+            	app.createObjectRelInstance(object.getPojo().getName()+"-OnFct", "isFunctionOf", object.getPojo().getName());
+            	app.createObjectRelInstance(object.getPojo().getName()+"-OffFct", "isFunctionOf", object.getPojo().getName());
+            	app.createObjectRelInstance(object.getPojo().getName()+"-OnFct", "hasEffect", r.getPojo().getName()+"Brightness");
+            	app.createObjectRelInstance(object.getPojo().getName()+"-OffFct", "hasEffect", r.getPojo().getName()+"Brightness");
+
+            }else
+            if (object.getClass().toString().equals("class com.freedomotic.things.impl.AirConditioner")){
+            	Room r = getObjLocation(object);
+                //ajouter light
+            	app.createObjectInstance("Aircondition" ,object.getPojo().getName(), "hasId",object.getPojo().getUUID());
+            	app.createObjectRelInstance(object.getPojo().getName(), "hasLocation", r.getPojo().getName());
+
+            	//fonctions
+            	app.createObjectInstance("SwitchOn" ,object.getPojo().getName()+"-OnFct","IsEnabeled", "False");
+            	app.createObjectInstance("SwitchOff" ,object.getPojo().getName()+"-OffFct","IsEnabeled", "True");
+            	app.createObjectInstance("TemperateurUp" ,object.getPojo().getName()+"-UpFct","IsEnabeled", "False");
+            	app.createObjectInstance("TemperateurDown" ,object.getPojo().getName()+"-DownFct","IsEnabeled", "True");
+ 
+            	app.createObjectRelInstance(object.getPojo().getName()+"-OnFct", "isFunctionOf", object.getPojo().getName());
+            	app.createObjectRelInstance(object.getPojo().getName()+"-OffFct", "isFunctionOf", object.getPojo().getName());
+            	app.createObjectRelInstance(object.getPojo().getName()+"-OnFct", "hasEffect", r.getPojo().getName()+"Temperature");
+            	app.createObjectRelInstance(object.getPojo().getName()+"-OffFct", "hasEffect", r.getPojo().getName()+"Temperature");
+
+            	app.createObjectRelInstance(object.getPojo().getName()+"-UpFct", "isFunctionOf", object.getPojo().getName());
+            	app.createObjectRelInstance(object.getPojo().getName()+"-DownfFct", "isFunctionOf", object.getPojo().getName());
+            	app.createObjectRelInstance(object.getPojo().getName()+"-UpFct", "hasEffect", r.getPojo().getName()+"Temperature");
+            	app.createObjectRelInstance(object.getPojo().getName()+"-DownFct", "hasEffect", r.getPojo().getName()+"Temperature");
+            }
+    	}
+    }
+    
+    
+    
     @Override
     protected void onRun(){
-
-       /*   for (EnvObjectLogic thing : thingsRepository.findAll()) {
-            LOG.info("HelloWorld sees Thing 1: {}", thing.getPojo().getName());
-            LOG.info("HelloWorld sees Thing 2: {}", thing.getPojo().getClass());
-            LOG.info("HelloWorld sees Thing 2: {}", thing.getPojo().getType());
-           
-            if(thing instanceof )
-            
-            
-        }*/
-          
-          
-          
-      
-      for (EnvObjectLogic object : getApi().things().findAll()) {
-          
-          
-        //  System.out.println("Object Name : "+object.getPojo().getName());
-        //  System.out.println("Object Class : "+object.getClass());
-          
-           if (object.getClass().toString().equals("class com.freedomotic.things.impl.Person")) {
-             //   ElectricDevice device = (ElectricDevice) object;
-        	   OntologieApp  ontologieApp =new OntologieApp();
-        	   ontologieApp.createInstance("Person", object.getPojo().getName(), object.getPojo().getUUID());
-        	   
-                System.out.println("device Name : "+ object.getPojo().getName());
-                System.out.println("device Environment : "+object.getClass().toString());
-                System.out.println("device id : "+object.getPojo().getUUID());
-                System.out.println("location : "+object.getPojo().getEnvironmentID());
-                System.out.println("-------------------------------------");
-                
-                
-            //    FreedomPoint location = randomLocation();
-                
-           //     LocationEvent event = new LocationEvent(this, person.getPojo().getUUID(), location);
-          //      notifyEvent(event);
-         // System.out.println("je reconnais un electicDivice");
-       //   device.setRandomLocation();
-       //   Config c = new Config();
-          
-          
-         
-          
-          
-            }
-        }
-        
+    	saveInOntologie();
+    	app.doQuery();
+/*
+    	Person user = getPerson();
+    	if(user != null){
+    		Room room = getUserLocation(user);
+    		if(room !=null){
+    			Light light = getLightsIn(room);
+    			if(light!=null){
+    				//System.err.println("HEEEEEEEEEEEEEEEEEEEY ! LIGHT");
+    				
+    				//light.executePowerOn(new Config());
+    			}
+    		}
+    	}
+*/
     }
 
     @Override
     protected void onStart() {
-
+    	
         LOG.info("HelloWorld plugin started");
     }
 
