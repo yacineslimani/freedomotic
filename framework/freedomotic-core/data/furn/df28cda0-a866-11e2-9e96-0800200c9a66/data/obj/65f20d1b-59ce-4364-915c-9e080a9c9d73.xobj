@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object>
+  <name>Air conditioner</name>
+  <description>An air conditioner</description>
+  <actAs>virtual</actAs>
+  <type>EnvObject.ElectricDevice.AirConditioner</type>
+  <uuid>65f20d1b-59ce-4364-915c-9e080a9c9d73</uuid>
+  <hierarchy>com.freedomotic.things.impl.AirConditioner</hierarchy>
+  <protocol>unknown</protocol>
+  <phisicalAddress>unknown</phisicalAddress>
+  <behaviors>
+    <com.freedomotic.model.object.BooleanBehavior>
+      <name>powered</name>
+      <description>On</description>
+      <active>true</active>
+      <priority>-1</priority>
+      <readOnly>false</readOnly>
+      <value>false</value>
+    </com.freedomotic.model.object.BooleanBehavior>
+    <com.freedomotic.model.object.BooleanBehavior>
+      <name>swing-mode</name>
+      <description>Swing mode</description>
+      <active>true</active>
+      <priority>-1</priority>
+      <readOnly>false</readOnly>
+      <value>false</value>
+    </com.freedomotic.model.object.BooleanBehavior>
+    <com.freedomotic.model.object.RangedIntBehavior>
+      <name>conditioning-temperature</name>
+      <description>Conditioning temperature</description>
+      <active>true</active>
+      <priority>-1</priority>
+      <readOnly>false</readOnly>
+      <value>25</value>
+      <max>35</max>
+      <min>15</min>
+      <scale>1</scale>
+      <step>1</step>
+    </com.freedomotic.model.object.RangedIntBehavior>
+    <com.freedomotic.model.object.RangedIntBehavior>
+      <name>fan-speed</name>
+      <description>Fan speed</description>
+      <active>true</active>
+      <priority>-1</priority>
+      <readOnly>false</readOnly>
+      <value>0</value>
+      <max>5</max>
+      <min>0</min>
+      <scale>1</scale>
+      <step>1</step>
+    </com.freedomotic.model.object.RangedIntBehavior>
+    <com.freedomotic.model.object.ListBehavior>
+      <name>conditioning-mode</name>
+      <description>Conditioning mode</description>
+      <active>true</active>
+      <priority>-1</priority>
+      <readOnly>false</readOnly>
+      <selected>0</selected>
+      <list>
+        <string>Auto</string>
+        <string>Dry</string>
+        <string>Cool</string>
+        <string>Heat</string>
+        <string>Fan</string>
+        <string>Humidity</string>
+      </list>
+    </com.freedomotic.model.object.ListBehavior>
+  </behaviors>
+  <representation>
+    <view>
+      <tangible>true</tangible>
+      <intersecable>false</intersecable>
+      <offset x="237" y="294"/>
+      <rotation>0.0</rotation>
+      <icon>airconditioner-off.png</icon>
+      <fillColor>#000000</fillColor>
+      <textColor>#000000</textColor>
+      <borderColor>#000000</borderColor>
+      <scaleX>0.0</scaleX>
+      <scaleY>0.0</scaleY>
+      <shape class="polygon">
+        <point x="0" y="0"/>
+        <point x="64" y="0"/>
+        <point x="64" y="64"/>
+        <point x="0" y="64"/>
+      </shape>
+    </view>
+    <view>
+      <tangible>true</tangible>
+      <intersecable>false</intersecable>
+      <offset x="237" y="294"/>
+      <rotation>0.0</rotation>
+      <icon>airconditioner-on.png</icon>
+      <fillColor>#000000</fillColor>
+      <textColor>#000000</textColor>
+      <borderColor>#000000</borderColor>
+      <scaleX>0.0</scaleX>
+      <scaleY>0.0</scaleY>
+      <shape class="polygon">
+        <point x="0" y="0"/>
+        <point x="64" y="0"/>
+        <point x="64" y="64"/>
+        <point x="0" y="64"/>
+      </shape>
+    </view>
+    <view>
+      <tangible>true</tangible>
+      <intersecable>false</intersecable>
+      <offset x="237" y="294"/>
+      <rotation>0.0</rotation>
+      <icon>airconditioner-running.png</icon>
+      <fillColor>#000000</fillColor>
+      <textColor>#000000</textColor>
+      <borderColor>#000000</borderColor>
+      <scaleX>0.0</scaleX>
+      <scaleY>0.0</scaleY>
+      <shape class="polygon">
+        <point x="0" y="0"/>
+        <point x="64" y="0"/>
+        <point x="64" y="64"/>
+        <point x="0" y="64"/>
+      </shape>
+    </view>
+  </representation>
+  <tags/>
+  <actions>
+    <property name="turn on" value="Execute it successfully"/>
+    <property name="set conditioning temperature" value="Execute it successfully"/>
+    <property name="turn off" value="Execute it successfully"/>
+    <property name="set fan speed" value="Execute it successfully"/>
+    <property name="set conditioning mode" value="Execute it successfully"/>
+    <property name="set swing mode" value="Execute it successfully"/>
+  </actions>
+  <triggers>
+    <property name="" value="conditioning-mode"/>
+  </triggers>
+  <currentRepresentation>0</currentRepresentation>
+  <envUUID>df28cda0-a866-11e2-9e96-0800200c9a66</envUUID>
+</object>

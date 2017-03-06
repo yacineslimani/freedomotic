@@ -37,7 +37,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="268" y="44"/>
+      <offset x="162" y="135"/>
       <rotation>0.0</rotation>
       <icon>thermostat.png</icon>
       <fillColor>#000000</fillColor>

@@ -185,6 +185,8 @@ public class SmartHouse
     	for (EnvObjectLogic object : getApi().things().findAll()) {
             if (object.getClass().toString().equals("class com.freedomotic.things.impl.Person")) {
             	
+            	System.err.println("user : "+object.getPojo().getName());
+            	
             	app.createPersonInstance("Person" ,object.getPojo().getName(), object.getPojo().getUUID());
             	//ajouter personne
             	Room r = getObjLocation(object);
@@ -198,10 +200,27 @@ public class SmartHouse
             	app.createObjectInstance("Light" ,object.getPojo().getName(), "hasId",object.getPojo().getUUID());
             	app.createObjectRelInstance(object.getPojo().getName(), "hasLocation", r.getPojo().getName());
             	//ajouter env brightness
-
+            	
+            	String state=null;
+            	for (BehaviorLogic lightState: object.getBehaviors()) {
+            		if( lightState.getName().equals("powered")){
+            			state= lightState.getValueAsString();
+            			System.out.println("env : " + lightState.getName());
+                		System.out.println("env state : " + lightState.getValueAsString());
+            		}	
+				}
+            	
+            	if(state.equals("true")){
+            		app.createObjectInstance("SwitchOn" ,object.getPojo().getName()+"-OnFct","isEnabeled", "true");
+                	app.createObjectInstance("SwitchOff" ,object.getPojo().getName()+"-OffFct","isEnabeled", "false");
+            	}
+            	else{
+            		app.createObjectInstance("SwitchOn" ,object.getPojo().getName()+"-OnFct","isEnabeled", "false");
+                	app.createObjectInstance("SwitchOff" ,object.getPojo().getName()+"-OffFct","isEnabeled", "true");
+            	}
+            	
             	//fonctions
-            	app.createObjectInstance("SwitchOn" ,object.getPojo().getName()+"-OnFct","IsEnabeled", "False");
-            	app.createObjectInstance("SwitchOff" ,object.getPojo().getName()+"-OffFct","IsEnabeled", "True");
+            	
 
             	app.createObjectRelInstance(object.getPojo().getName()+"-OnFct", "isFunctionOf", object.getPojo().getName());
             	app.createObjectRelInstance(object.getPojo().getName()+"-OffFct", "isFunctionOf", object.getPojo().getName());
@@ -216,10 +235,10 @@ public class SmartHouse
             	app.createObjectRelInstance(object.getPojo().getName(), "hasLocation", r.getPojo().getName());
 
             	//fonctions
-            	app.createObjectInstance("SwitchOn" ,object.getPojo().getName()+"-OnFct","IsEnabeled", "False");
-            	app.createObjectInstance("SwitchOff" ,object.getPojo().getName()+"-OffFct","IsEnabeled", "True");
-            	app.createObjectInstance("TemperateurUp" ,object.getPojo().getName()+"-UpFct","IsEnabeled", "False");
-            	app.createObjectInstance("TemperateurDown" ,object.getPojo().getName()+"-DownFct","IsEnabeled", "True");
+            	app.createObjectInstance("SwitchOn" ,object.getPojo().getName()+"-OnFct","isEnabeled", "false");
+            	app.createObjectInstance("SwitchOff" ,object.getPojo().getName()+"-OffFct","isEnabeled", "true");
+            	app.createObjectInstance("TemperateurUp" ,object.getPojo().getName()+"-UpFct","isEnabeled", "false");
+            	app.createObjectInstance("TemperateurDown" ,object.getPojo().getName()+"-DownFct","isEnabeled", "true");
  
             	app.createObjectRelInstance(object.getPojo().getName()+"-OnFct", "isFunctionOf", object.getPojo().getName());
             	app.createObjectRelInstance(object.getPojo().getName()+"-OffFct", "isFunctionOf", object.getPojo().getName());
@@ -239,7 +258,25 @@ public class SmartHouse
     @Override
     protected void onRun(){
     	saveInOntologie();
-    	app.doQuery();
+    	ArrayList<String> idLight = app.switchOnLightQuery();
+        
+    	for (EnvObjectLogic object : getApi().things().findAll()) {
+    		
+			for(String idL : idLight){
+				System.out.println("id L \t"+idL);
+				System.out.println("pojo \t"+object.getPojo().getUUID());
+			
+    		if(object.getPojo().getUUID().equals(idL)){
+    			
+    			Light light = (Light) object;
+    			light.executePowerOn(new Config());
+    		}
+    		else{
+    			System.err.println("je ne suis pas dans le if");
+    		}
+			}
+    	}
+    	
 /*
     	Person user = getPerson();
     	if(user != null){

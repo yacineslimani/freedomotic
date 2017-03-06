@@ -1,0 +1,12 @@
+#Filename 		 #ThingName
+873597c2-54b6-4f6e-8340-44ac9f5574a7.xobj		Thermometer
+f8830f34-e45c-46da-be76-5b4108e67e4b.xobj		Clock
+e6f2f150-9f0e-49bc-9fbe-86f7a91c65db.xobj		LightAdel
+27e1877d-0472-4bf1-8fcc-4b16012085f0.xobj		Plant
+06e94ceb-7218-4fff-9305-668d94d0fa59.xobj		Bedroom door
+d8b455b7-9883-4e82-95e3-965c35f404ba.xobj		Lights General Switch
+76fd619c-617b-4fb7-9870-8f08164c4926.xobj		Livingroom light
+641d9d3f-c8ad-4a9b-824e-8f7285fbe12a.xobj		Kitchen door
+21969e70-7e00-4a0d-a13f-a4728240d9d0.xobj		Kitchen Light
+1ad47c96-f58b-47eb-85bd-139e241d51eb.xobj		pupuch
+24b01c5b-ea44-4a6e-8d89-f3f468765840.xobj		Kitchen Light-145

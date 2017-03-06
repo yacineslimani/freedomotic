@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<environment>
+  <name>Ground Floor</name>
+  <width>1500</width>
+  <height>1324</height>
+  <renderer>photo</renderer>
+  <backgroundColor>
+    <red>255</red>
+    <green>255</green>
+    <blue>255</blue>
+    <alpha>255</alpha>
+  </backgroundColor>
+  <backgroundImage>map2.png</backgroundImage>
+  <zones>
+    <zone>
+      <name>Indoor</name>
+      <description></description>
+      <room>false</room>
+      <shape>
+        <point x="20" y="240"/>
+        <point x="1460" y="240"/>
+        <point x="1460" y="730"/>
+        <point x="1195" y="730"/>
+        <point x="1195" y="1165"/>
+        <point x="300" y="1165"/>
+        <point x="300" y="905"/>
+        <point x="20" y="905"/>
+      </shape>
+    </zone>
+    <zone>
+      <name>Bedroom</name>
+      <description></description>
+      <room>true</room>
+      <shape>
+        <point x="20" y="240"/>
+        <point x="390" y="240"/>
+        <point x="390" y="680"/>
+        <point x="305" y="680"/>
+        <point x="305" y="620"/>
+        <point x="20" y="620"/>
+      </shape>
+      <texture>wood.jpg</texture>
+      <uuid>e5a57af6-7aff-412d-85b3-c5c770f7827f</uuid>
+    </zone>
+    <zone>
+      <name>Office</name>
+      <description></description>
+      <room>true</room>
+      <shape>
+        <point x="20" y="620"/>
+        <point x="305" y="620"/>
+        <point x="305" y="905"/>
+        <point x="20" y="905"/>
+      </shape>
+      <texture>wood.jpg</texture>
+      <uuid>57a9e7dc-9ada-41fb-948c-e1d38cec4998</uuid>
+    </zone>
+    <zone>
+      <name>Livingroom</name>
+      <description></description>
+      <room>true</room>
+      <shape>
+        <point x="305" y="680"/>
+        <point x="390" y="680"/>
+        <point x="390" y="730"/>
+        <point x="1195" y="730"/>
+        <point x="1195" y="1170"/>
+        <point x="900" y="1170"/>
+        <point x="900" y="910"/>
+        <point x="730" y="910"/>
+        <point x="730" y="1170"/>
+        <point x="305" y="1170"/>
+      </shape>
+      <texture>wood.jpg</texture>
+      <uuid>95bb919e-c368-4dba-8c66-3a99b735fa5a</uuid>
+    </zone>
+    <zone>
+      <name>Kitchen</name>
+      <description></description>
+      <room>true</room>
+      <shape>
+        <point x="595" y="730"/>
+        <point x="595" y="240"/>
+        <point x="860" y="240"/>
+        <point x="860" y="440"/>
+        <point x="905" y="440"/>
+        <point x="905" y="645"/>
+        <point x="855" y="645"/>
+        <point x="855" y="730"/>
+      </shape>
+      <texture>wood.jpg</texture>
+      <uuid>a20348da-2878-4fb1-b7c9-5ace3ed975d8</uuid>
+    </zone>
+    <zone>
+      <name>Bathroom</name>
+      <description></description>
+      <room>true</room>
+      <shape>
+        <point x="390" y="240"/>
+        <point x="595" y="240"/>
+        <point x="595" y="505"/>
+        <point x="390" y="505"/>
+      </shape>
+      <texture>wood.jpg</texture>
+      <uuid>546032e3-6bcf-46a1-88e2-a2a3fe83d743</uuid>
+    </zone>
+    <zone>
+      <name>Dress room</name>
+      <description></description>
+      <room>true</room>
+      <shape>
+        <point x="390" y="505"/>
+        <point x="595" y="505"/>
+        <point x="595" y="730"/>
+        <point x="390" y="730"/>
+      </shape>
+      <texture>wood.jpg</texture>
+      <uuid>b51da965-3833-4ac5-b9e6-c7be7579c6bb</uuid>
+    </zone>
+    <zone>
+      <name>Garage</name>
+      <description></description>
+      <room>true</room>
+      <shape>
+        <point x="990" y="240"/>
+        <point x="1460" y="240"/>
+        <point x="1460" y="730"/>
+        <point x="990" y="730"/>
+      </shape>
+      <texture>wood.jpg</texture>
+      <uuid>57f36361-082d-4bcf-a0a5-e56cb6203e46</uuid>
+    </zone>
+    <zone>
+      <name>Bathroom Small</name>
+      <description></description>
+      <room>true</room>
+      <shape>
+        <point x="855" y="645"/>
+        <point x="905" y="645"/>
+        <point x="905" y="570"/>
+        <point x="990" y="570"/>
+        <point x="990" y="730"/>
+        <point x="855" y="730"/>
+      </shape>
+      <texture>wood.jpg</texture>
+      <uuid>9ebaae75-cf45-49d7-b988-6664ab5b907a</uuid>
+    </zone>
+    <zone>
+      <name>Utility room</name>
+      <description></description>
+      <room>true</room>
+      <shape>
+        <point x="905" y="440"/>
+        <point x="860" y="440"/>
+        <point x="860" y="240"/>
+        <point x="990" y="240"/>
+        <point x="990" y="570"/>
+        <point x="905" y="570"/>
+      </shape>
+      <texture>wood.jpg</texture>
+      <uuid>813c30c4-6086-42b3-a536-a2a40d2ef766</uuid>
+    </zone>
+    <zone>
+      <name>Upstairs</name>
+      <description></description>
+      <room>true</room>
+      <shape>
+        <point x="730" y="910"/>
+        <point x="900" y="910"/>
+        <point x="900" y="1170"/>
+        <point x="730" y="1170"/>
+      </shape>
+      <texture>wood.jpg</texture>
+      <uuid>30d2ec67-4fc6-4901-a433-68fed05fbb04</uuid>
+    </zone>
+  </zones>
+  <uuid>df28cda0-a866-11e2-9e96-0800200c9a66</uuid>
+</environment>

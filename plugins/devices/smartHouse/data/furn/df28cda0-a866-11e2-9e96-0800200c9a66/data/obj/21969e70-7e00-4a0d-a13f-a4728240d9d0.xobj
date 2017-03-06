@@ -1,56 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <object>
-  <name>User</name>
-  <description>A user in the environment</description>
+  <name>Kitchen Light</name>
+  <description>A light</description>
   <actAs>virtual</actAs>
-  <type>EnvObject.Person.User</type>
-  <uuid>f01cb61c-954d-41f8-932d-491d719b769f</uuid>
-  <hierarchy>com.freedomotic.things.impl.Person</hierarchy>
+  <type>EnvObject.ElectricDevice.Light</type>
+  <uuid>21969e70-7e00-4a0d-a13f-a4728240d9d0</uuid>
+  <hierarchy>com.freedomotic.things.impl.Light</hierarchy>
   <protocol>unknown</protocol>
   <phisicalAddress>unknown</phisicalAddress>
   <behaviors>
     <com.freedomotic.model.object.BooleanBehavior>
-      <name>present</name>
+      <name>powered</name>
       <description></description>
       <active>true</active>
       <priority>-1</priority>
       <readOnly>false</readOnly>
-      <value>true</value>
+      <value>false</value>
     </com.freedomotic.model.object.BooleanBehavior>
-    <com.freedomotic.model.object.ListBehavior>
-      <name>activity</name>
+    <com.freedomotic.model.object.RangedIntBehavior>
+      <name>brightness</name>
       <description></description>
       <active>true</active>
       <priority>-1</priority>
-      <readOnly>false</readOnly>
-      <selected>2</selected>
-      <list>
-        <string>Sleeping</string>
-        <string>Resting</string>
-        <string>Standing</string>
-        <string>Moving</string>
-      </list>
-    </com.freedomotic.model.object.ListBehavior>
-    <com.freedomotic.model.object.PropertiesBehavior>
-      <name>properties</name>
-      <description></description>
+      <readOnly>true</readOnly>
+      <value>0</value>
+      <max>100</max>
+      <min>0</min>
+      <scale>1</scale>
+      <step>10</step>
+    </com.freedomotic.model.object.RangedIntBehavior>
+    <com.freedomotic.model.object.RangedIntBehavior>
+      <name>power_consumption</name>
+      <description>Power consumed when device is on</description>
       <active>true</active>
       <priority>-1</priority>
       <readOnly>false</readOnly>
-      <properties>
-        <property name="birthdate" value="05/10/1984"/>
-        <property name="mobile" value="+39111223344"/>
-        <property name="email" value="user@freedomotic.com"/>
-      </properties>
-    </com.freedomotic.model.object.PropertiesBehavior>
+      <value>0</value>
+      <max>3000</max>
+      <min>0</min>
+      <scale>1</scale>
+      <step>10</step>
+    </com.freedomotic.model.object.RangedIntBehavior>
   </behaviors>
   <representation>
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="724" y="552"/>
+      <offset x="800" y="189"/>
       <rotation>0.0</rotation>
-      <icon>person.png</icon>
+      <icon>light-off.png</icon>
       <fillColor>#000000</fillColor>
       <textColor>#000000</textColor>
       <borderColor>#000000</borderColor>
@@ -66,9 +64,9 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="724" y="552"/>
+      <offset x="800" y="189"/>
       <rotation>0.0</rotation>
-      <icon>person.png</icon>
+      <icon>light-on.png</icon>
       <fillColor>#000000</fillColor>
       <textColor>#000000</textColor>
       <borderColor>#000000</borderColor>
@@ -86,9 +84,10 @@
   <actions>
     <property name="turn on" value="Execute it successfully"/>
     <property name="turn off" value="Execute it successfully"/>
+    <property name="set brightness" value="Execute it successfully"/>
   </actions>
   <triggers>
-    <property name="" value="powered"/>
+    <property name="" value="brightness"/>
   </triggers>
   <currentRepresentation>0</currentRepresentation>
   <envUUID>df28cda0-a866-11e2-9e96-0800200c9a66</envUUID>

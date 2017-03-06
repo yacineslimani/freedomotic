@@ -1,0 +1,11 @@
+@prefix ns: <http://www.semanticweb.org/nacer/ontologies/smartHome#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>. 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+
+[rule1: (?per rdf:type ns:Person) (?per ns:hasLocation ?loc) (?lamp rdf:type ns:Light) (?lamp ns:hasLocation ?loc) (?fcton rdf:type ns:SwitchOn) (?fcton ns:isFunctionOf ?lamp) (?fcton ns:isEnabeled ?val) (?lamp ns:hasId ?id) notEqual(?val,true) -> (?lamp rdf:type ns:aAllumer)]
+
+
+
+[rule2: (?lamp rdf:type ns:Light) (?lamp ns:hasLocation ?loc1)(fcton rdf:type ns:SwitchOn) (?fcton ns:isFunctionOn ?lamp)(?fcton ns:isEnabeled ?val) (?per rdf:type ns:Person) (?per ns:hasLocation ?loc2) (?lamp ns:hasId ?id) notEqual(?val,false) notEqual(?loc1,?loc2) -> print('Eteindre la Light id=',?id) (?lamp rdf:type ns:aEteindre)]

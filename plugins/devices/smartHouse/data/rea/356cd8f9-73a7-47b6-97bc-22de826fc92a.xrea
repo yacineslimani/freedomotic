@@ -2,6 +2,6 @@
 <reaction>
   <trigger>When an account logs in</trigger>
   <sequence>
-    <command>Create a new User with the same name</command>
+    <command>Create a new pupuch with the same name</command>
   </sequence>
 </reaction>

@@ -40,7 +40,7 @@
         <point x="20" y="620"/>
       </shape>
       <texture>wood.jpg</texture>
-      <uuid>7c0124d2-1032-43fb-a5d3-4243640fecc0</uuid>
+      <uuid>9a0c3f5e-fbaf-4051-900f-f005d25d5ae1</uuid>
     </zone>
     <zone>
       <name>Office</name>
@@ -53,11 +53,11 @@
         <point x="20" y="905"/>
       </shape>
       <texture>wood.jpg</texture>
-      <uuid>0bed5310-1792-453f-bfc4-e85639857877</uuid>
+      <uuid>92bc58de-a758-4796-a71d-77da03ab9019</uuid>
     </zone>
     <zone>
       <name>Livingroom</name>
-      <description>From Livingroom you can reach Kitchen </description>
+      <description></description>
       <room>true</room>
       <shape>
         <point x="305" y="680"/>
@@ -72,11 +72,11 @@
         <point x="305" y="1170"/>
       </shape>
       <texture>wood.jpg</texture>
-      <uuid>429b1dfe-7db8-4cad-8ddf-842596347608</uuid>
+      <uuid>dbf707c6-40c1-4739-b809-73fabc6c0bfc</uuid>
     </zone>
     <zone>
       <name>Kitchen</name>
-      <description>From Kitchen you can reach Livingroom </description>
+      <description></description>
       <room>true</room>
       <shape>
         <point x="595" y="730"/>
@@ -89,7 +89,7 @@
         <point x="855" y="730"/>
       </shape>
       <texture>wood.jpg</texture>
-      <uuid>0b6e0b7e-2c40-4388-a586-a80396a5f252</uuid>
+      <uuid>c4ac5a23-d29e-4e9e-975e-af75bf04b384</uuid>
     </zone>
     <zone>
       <name>Bathroom</name>
@@ -102,7 +102,7 @@
         <point x="390" y="505"/>
       </shape>
       <texture>wood.jpg</texture>
-      <uuid>2d6ca3f8-d5d6-40e3-a102-d047de581515</uuid>
+      <uuid>3d5c0a48-a027-49f3-9103-9ff46c1e2086</uuid>
     </zone>
     <zone>
       <name>Dress room</name>
@@ -115,7 +115,7 @@
         <point x="390" y="730"/>
       </shape>
       <texture>wood.jpg</texture>
-      <uuid>8d568bc7-71d9-4722-a260-aa6ee0994ca2</uuid>
+      <uuid>1669ede2-7d54-4b10-bb9e-a2375c1acadf</uuid>
     </zone>
     <zone>
       <name>Garage</name>
@@ -128,7 +128,7 @@
         <point x="990" y="730"/>
       </shape>
       <texture>wood.jpg</texture>
-      <uuid>b6e36a22-8db5-4cbf-9b7a-86a91c00c319</uuid>
+      <uuid>34f41d1d-34e4-4484-b00b-d08c651047b4</uuid>
     </zone>
     <zone>
       <name>Bathroom Small</name>
@@ -143,7 +143,7 @@
         <point x="855" y="730"/>
       </shape>
       <texture>wood.jpg</texture>
-      <uuid>06083100-811f-49ba-873a-df5191285a94</uuid>
+      <uuid>933da119-82ef-4d71-9e15-642e8cfd2ea7</uuid>
     </zone>
     <zone>
       <name>Utility room</name>
@@ -158,7 +158,7 @@
         <point x="905" y="570"/>
       </shape>
       <texture>wood.jpg</texture>
-      <uuid>83b1056e-fc05-44e5-82f8-c2304c43adc2</uuid>
+      <uuid>407e5dec-fb13-4cff-a6e6-888f46c1e348</uuid>
     </zone>
     <zone>
       <name>Upstairs</name>
@@ -171,7 +171,7 @@
         <point x="730" y="1170"/>
       </shape>
       <texture>wood.jpg</texture>
-      <uuid>0c526311-bc5d-4186-9ef2-4f94fc3f8787</uuid>
+      <uuid>0db87788-c045-49a5-a4e3-6c73765a662e</uuid>
     </zone>
   </zones>
   <uuid>df28cda0-a866-11e2-9e96-0800200c9a66</uuid>

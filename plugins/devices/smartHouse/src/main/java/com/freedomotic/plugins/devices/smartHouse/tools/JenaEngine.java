@@ -99,34 +99,26 @@ public class JenaEngine {
 		// Execute the query and obtain results
 		QueryExecution qe = QueryExecutionFactory.create(query, model);
 		ResultSet results;
+		String resultQuery="";
 		try {
 			 results = qe.execSelect();
 			while (results.hasNext()) {
 				QuerySolution soln = results.nextSolution();
 				Literal name = soln.getLiteral("nom");
 				Resource user = soln.getResource("user");
-				System.out.println(name.getString()+"\t"+user.getLocalName());
+				
+				 resultQuery = resultQuery+name.getString()+"\t"+user.getLocalName()+";";
+				 
 			}
+			
 		} finally {
 			qe.close();
 		}
 		
 		
 		
-		OutputStream output = new OutputStream() {
-			private StringBuilder string = new StringBuilder();
-			@Override
-			public void write(int b) throws IOException {
-				this.string.append((char) b);
-			}
-			//Netbeans IDE automatically overrides this toString()
-			public String toString() {
-				return this.string.toString();
-			}
-		};
-		ResultSetFormatter.out(output, results, query);
 		//output.
-		return output.toString();
+		return resultQuery;
 	}
 	/**
 	 * Executer un fichier d'une requete

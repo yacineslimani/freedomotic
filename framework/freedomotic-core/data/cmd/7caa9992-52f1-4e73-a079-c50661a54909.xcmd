@@ -20,8 +20,8 @@
   <properties>
     <properties>
       <property name="behavior" value="powered"/>
-      <property name="object.class" value="EnvObject.ElectricDevice.Light"/>
       <property name="value" value="opposite"/>
+      <property name="object.class" value="EnvObject.ElectricDevice.Light"/>
     </properties>
     <tuples/>
   </properties>

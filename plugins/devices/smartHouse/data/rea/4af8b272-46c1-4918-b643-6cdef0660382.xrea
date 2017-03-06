@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<reaction>
+  <trigger>When a door is clicked</trigger>
+  <sequence>
+    <command>Switch its open state</command>
+  </sequence>
+</reaction>

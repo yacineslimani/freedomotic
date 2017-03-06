@@ -22,7 +22,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="186" y="11"/>
+      <offset x="87" y="141"/>
       <rotation>0.0</rotation>
       <icon>togglebutton-off.png</icon>
       <fillColor>#000000</fillColor>
@@ -40,7 +40,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="186" y="11"/>
+      <offset x="87" y="141"/>
       <rotation>0.0</rotation>
       <icon>togglebutton-on.png</icon>
       <fillColor>#000000</fillColor>
