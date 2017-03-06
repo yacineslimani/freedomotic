@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object>
+  <name>Thermometer</name>
+  <description>Collects temperature events</description>
+  <actAs>virtual</actAs>
+  <type>EnvObject.Thermometer</type>
+  <uuid>873597c2-54b6-4f6e-8340-44ac9f5574a7</uuid>
+  <hierarchy>com.freedomotic.things.impl.Thermometer</hierarchy>
+  <protocol>unknown</protocol>
+  <phisicalAddress>unknown</phisicalAddress>
+  <behaviors>
+    <com.freedomotic.model.object.RangedIntBehavior>
+      <name>temperature</name>
+      <description></description>
+      <active>true</active>
+      <priority>-1</priority>
+      <readOnly>true</readOnly>
+      <value>0</value>
+      <max>1000</max>
+      <min>-600</min>
+      <scale>10</scale>
+      <step>1</step>
+    </com.freedomotic.model.object.RangedIntBehavior>
+  </behaviors>
+  <representation>
+    <view>
+      <tangible>true</tangible>
+      <intersecable>false</intersecable>
+      <offset x="365" y="27"/>
+      <rotation>0.0</rotation>
+      <icon>thermometer.png</icon>
+      <fillColor>#000000</fillColor>
+      <textColor>#000000</textColor>
+      <borderColor>#000000</borderColor>
+      <scaleX>0.0</scaleX>
+      <scaleY>0.0</scaleY>
+      <shape class="polygon">
+        <point x="0" y="0"/>
+        <point x="64" y="0"/>
+        <point x="64" y="64"/>
+        <point x="0" y="64"/>
+      </shape>
+    </view>
+  </representation>
+  <tags>
+    <string></string>
+  </tags>
+  <actions>
+    <property name="set temperature" value="Execute it successfully"/>
+  </actions>
+  <triggers>
+    <property name="" value="temperature"/>
+  </triggers>
+  <currentRepresentation>0</currentRepresentation>
+  <envUUID>df28cda0-a866-11e2-9e96-0800200c9a66</envUUID>
+</object>

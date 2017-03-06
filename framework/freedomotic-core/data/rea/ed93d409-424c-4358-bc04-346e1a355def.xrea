@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<reaction>
+  <trigger>When Lights General Switch is clicked</trigger>
+  <sequence>
+    <command>switch power for all lights</command>
+  </sequence>
+</reaction>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<command>
+  <name>Create a new User with the same name</name>
+  <receiver>app.objects.create</receiver>
+  <uuid>d8694e48-8bd6-4a5f-8cef-4c595305a0b6</uuid>
+  <delay>0</delay>
+  <timeout>0</timeout>
+  <description>create a new user Thing</description>
+  <hardwareLevel>false</hardwareLevel>
+  <editable>true</editable>
+  <executed>false</executed>
+  <properties>
+    <properties>
+      <property name="object.address" value="unknown"/>
+      <property name="object.name" value="@event.account.subject"/>
+      <property name="object.class" value="User"/>
+      <property name="object.protocol" value="unknown"/>
+      <property name="autodiscovery.allow-clones" value="false"/>
+    </properties>
+  </properties>
+</command>

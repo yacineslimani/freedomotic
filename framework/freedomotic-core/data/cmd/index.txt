@@ -1,0 +1,4 @@
+#Filename 		 #CommandName 			 #Destination
+d8694e48-8bd6-4a5f-8cef-4c595305a0b6.xcmd		Create a new User with the same name			app.objects.create
+40a233bc-922a-469c-9107-8a1946c3f3a3.xcmd		turn off devices tagged useless			app.events.sensors.behavior.request.objects
+7caa9992-52f1-4e73-a079-c50661a54909.xcmd		switch power for all lights			app.events.sensors.behavior.request.objects

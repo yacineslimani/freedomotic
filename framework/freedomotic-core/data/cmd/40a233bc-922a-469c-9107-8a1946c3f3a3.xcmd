@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<command>
+  <name>turn off devices tagged useless</name>
+  <receiver>app.events.sensors.behavior.request.objects</receiver>
+  <uuid>40a233bc-922a-469c-9107-8a1946c3f3a3</uuid>
+  <delay>0</delay>
+  <timeout>0</timeout>
+  <description>turn off all devices with tag &apos;useless&apos;</description>
+  <tags>
+    <string>tagged</string>
+    <string>devices</string>
+    <string>useless</string>
+    <string>turn</string>
+    <string>off</string>
+  </tags>
+  <hardwareLevel>false</hardwareLevel>
+  <editable>true</editable>
+  <executed>false</executed>
+  <properties>
+    <properties>
+      <property name="behavior" value="powered"/>
+      <property name="object.includetags" value="useless"/>
+      <property name="value" value="false"/>
+    </properties>
+    <tuples/>
+  </properties>
+</command>

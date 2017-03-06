@@ -1,0 +1,5 @@
+#Filename 		 #Reaction 			 #Description
+ed93d409-424c-4358-bc04-346e1a355def			WHEN  [When Lights General Switch is clicked]  THEN (switch power for all lights)			When Lights General Switch is clicked then switch power for all lights
+688481c5-550d-42c8-a94f-89e6a86cc483			WHEN  [When a door is clicked]  THEN (Switch its open state)			When a door is clicked then opens/closes the gate in the event
+425193c6-a851-4886-af08-f10835ee6685			WHEN  [When an account logs in]  THEN (Create a new User with the same name)			When an account logs in then create a new user Thing
+8a9ae699-b933-4c08-9173-38fb271b67c4			WHEN  [When an electric device is clicked]  THEN (Switch its power)			When an electric device is clicked then Object switches its power

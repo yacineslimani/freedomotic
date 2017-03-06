@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object>
+  <name>Door</name>
+  <description>Connects no rooms</description>
+  <actAs>virtual</actAs>
+  <type>EnvObject.Gate</type>
+  <uuid>ebc08b33-c578-4725-ad99-e869a8de91a9</uuid>
+  <hierarchy>com.freedomotic.things.impl.Gate</hierarchy>
+  <protocol>unknown</protocol>
+  <phisicalAddress>unknown</phisicalAddress>
+  <behaviors>
+    <com.freedomotic.model.object.BooleanBehavior>
+      <name>open</name>
+      <description>asd</description>
+      <active>true</active>
+      <priority>-1</priority>
+      <readOnly>false</readOnly>
+      <value>true</value>
+    </com.freedomotic.model.object.BooleanBehavior>
+    <com.freedomotic.model.object.RangedIntBehavior>
+      <name>openness</name>
+      <description>asd</description>
+      <active>true</active>
+      <priority>-1</priority>
+      <readOnly>false</readOnly>
+      <value>100</value>
+      <max>100</max>
+      <min>0</min>
+      <scale>1</scale>
+      <step>1</step>
+    </com.freedomotic.model.object.RangedIntBehavior>
+  </behaviors>
+  <representation>
+    <view>
+      <tangible>true</tangible>
+      <intersecable>false</intersecable>
+      <offset x="1203" y="769"/>
+      <rotation>0.0</rotation>
+      <icon>door.png</icon>
+      <fillColor>#eee9e9</fillColor>
+      <textColor>#000000</textColor>
+      <borderColor>#606060</borderColor>
+      <scaleX>0.0</scaleX>
+      <scaleY>0.0</scaleY>
+      <shape class="polygon">
+        <point x="0" y="0"/>
+        <point x="60" y="0"/>
+        <point x="60" y="8"/>
+        <point x="0" y="8"/>
+      </shape>
+    </view>
+    <view>
+      <tangible>true</tangible>
+      <intersecable>false</intersecable>
+      <offset x="1203" y="769"/>
+      <rotation>25.0</rotation>
+      <fillColor>#eee9e9</fillColor>
+      <textColor>#000000</textColor>
+      <borderColor>#606060</borderColor>
+      <scaleX>0.0</scaleX>
+      <scaleY>0.0</scaleY>
+      <shape class="polygon">
+        <point x="0" y="0"/>
+        <point x="60" y="0"/>
+        <point x="60" y="8"/>
+        <point x="0" y="8"/>
+      </shape>
+    </view>
+    <view>
+      <tangible>true</tangible>
+      <intersecable>false</intersecable>
+      <offset x="1203" y="769"/>
+      <rotation>0.0</rotation>
+      <fillColor>#eee9e9</fillColor>
+      <textColor>#000000</textColor>
+      <borderColor>#606060</borderColor>
+      <scaleX>0.0</scaleX>
+      <scaleY>0.0</scaleY>
+      <shape class="polygon">
+        <point x="0" y="0"/>
+        <point x="60" y="0"/>
+        <point x="60" y="8"/>
+        <point x="0" y="8"/>
+      </shape>
+    </view>
+  </representation>
+  <tags/>
+  <actions>
+    <property name="measured open" value="Execute it successfully"/>
+    <property name="close" value="Execute it successfully"/>
+    <property name="open" value="Execute it successfully"/>
+  </actions>
+  <triggers>
+    <property name="" value="openness"/>
+  </triggers>
+  <currentRepresentation>1</currentRepresentation>
+  <envUUID>df28cda0-a866-11e2-9e96-0800200c9a66</envUUID>
+</object>
