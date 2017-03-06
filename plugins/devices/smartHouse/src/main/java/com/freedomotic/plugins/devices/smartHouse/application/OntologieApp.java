@@ -22,7 +22,8 @@ public class OntologieApp {
 	public static final String ns = "http://www.semanticweb.org/nacer/ontologies/smartHome#";
 	public static String inputDataOntology = "data/smartHome.owl";//"data/smartHome.owl";
 	public static String inputRule = "data/rules.txt";//rules.txt";
-	public static String inputQuery = "data/query.txt";
+	public static String aAllumerQuery = "data/Aallumer.txt";
+	public static String aEtteindreQuery = "data/aEtteindre.txt";
 	public static String inputQuery2 = "data/query2.txt";
 
 	/**
@@ -34,8 +35,8 @@ public class OntologieApp {
 	//pour tout ce qui n'est pas room ou person
 	public ArrayList<String> switchOnLightQuery(){
 		
-		System.out.println(JenaEngine.executeQueryFile(inferedModel, inputQuery));
-		String result=JenaEngine.executeQueryFile(inferedModel, inputQuery);
+		System.out.println(JenaEngine.executeQueryFile(inferedModel, aAllumerQuery));
+		String result=JenaEngine.executeQueryFile(inferedModel, aAllumerQuery);
 		ArrayList<String> ListId= new ArrayList<String>() ;
 		
 		String[] str = result.split(";");
@@ -43,18 +44,29 @@ public class OntologieApp {
 			String [] tabId = s.split("\t");
 			ListId.add(tabId[0]);
 		}
-		return ListId;
-		
-		
+		return ListId;		
 	}
 	
+public ArrayList<String> switchOffLightQuery(){
+		
+		System.out.println(JenaEngine.executeQueryFile(inferedModel, aEtteindreQuery));
+		String result=JenaEngine.executeQueryFile(inferedModel, aEtteindreQuery);
+		ArrayList<String> ListId= new ArrayList<String>() ;
+		
+		String[] str = result.split(";");
+		for (String s : str){
+			String [] tabId = s.split("\t");
+			ListId.add(tabId[0]);
+		}
+		return ListId;		
+	}
 	
 	
 	public void createObjectRelInstance(String obj1, String rel, String obj2){
 		JenaEngine.addValueOfObjectProperty(inferedModel, ns, obj1, rel,obj2);
 	}
 
-	public void createObjectInstance(String cls ,String value,String prop, String uuid){
+	public void createObjectInstance(String cls ,String value,String prop, Object uuid){
 
 		JenaEngine.createInstanceOfClass(inferedModel, ns, cls, value);
 		JenaEngine.addValueOfDataTypeProperty(inferedModel, ns, value,prop, uuid);

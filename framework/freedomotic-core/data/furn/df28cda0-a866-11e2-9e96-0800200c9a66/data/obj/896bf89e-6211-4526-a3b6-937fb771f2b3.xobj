@@ -48,7 +48,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="693" y="531"/>
+      <offset x="301" y="434"/>
       <rotation>0.0</rotation>
       <icon>person.png</icon>
       <fillColor>#000000</fillColor>
@@ -66,7 +66,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="693" y="531"/>
+      <offset x="301" y="434"/>
       <rotation>0.0</rotation>
       <icon>person.png</icon>
       <fillColor>#000000</fillColor>

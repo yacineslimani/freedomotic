@@ -34,6 +34,7 @@ import com.freedomotic.model.ds.Config;
 import com.freedomotic.model.geometry.FreedomPoint;
 import com.freedomotic.model.object.Behavior;
 import com.freedomotic.model.object.EnvObject;
+import com.freedomotic.plugins.devices.smartHouse.application.Action;
 import com.freedomotic.plugins.devices.smartHouse.application.OntologieApp;
 import com.freedomotic.plugins.devices.smartHouse.tools.JenaEngine;
 import com.freedomotic.things.EnvObjectLogic;
@@ -65,6 +66,7 @@ public class SmartHouse
     @Inject
     private ThingRepository thingsRepository;
     OntologieApp app= new OntologieApp();
+    Action action = new Action();
     /**
      *
      */
@@ -167,11 +169,11 @@ public class SmartHouse
     	for(EnvironmentLogic flate: getApi().environments().findAll()){
           	 for(Room room : flate.getRooms()){	 
              	app.createRoomInstance(room.getPojo().getName() ,room.getPojo().getName().replaceAll(" ", ""), room.getPojo().getUuid());
-            	app.createObjectInstance("Brightness" ,room.getPojo().getName()+"Brightness","hasSensorValue", "0");
+            	app.createObjectInstance("Brightness" ,room.getPojo().getName()+"Brightness","hasSensorValue", 0);
             	app.createObjectInstance("Temperature" ,room.getPojo().getName()+"Temperature","hasSensorValue", "10");
             	
-            	app.createObjectRelInstance(room.getPojo().getName(), "hasEnvironement", room.getPojo().getName()+"Brightness");
-            	app.createObjectRelInstance(room.getPojo().getName(), "hasEnvironement", room.getPojo().getName()+"Temperature");
+            	app.createObjectRelInstance(room.getPojo().getName(), "hasEnvironment", room.getPojo().getName()+"Brightness");
+            	app.createObjectRelInstance(room.getPojo().getName(), "hasEnvironment", room.getPojo().getName()+"Temperature");
 
             	//and more...
                  
@@ -255,42 +257,11 @@ public class SmartHouse
     
     
     
+    
     @Override
     protected void onRun(){
     	saveInOntologie();
-    	ArrayList<String> idLight = app.switchOnLightQuery();
-        
-    	for (EnvObjectLogic object : getApi().things().findAll()) {
-    		
-			for(String idL : idLight){
-				System.out.println("id L \t"+idL);
-				System.out.println("pojo \t"+object.getPojo().getUUID());
-			
-    		if(object.getPojo().getUUID().equals(idL)){
-    			
-    			Light light = (Light) object;
-    			light.executePowerOn(new Config());
-    		}
-    		else{
-    			System.err.println("je ne suis pas dans le if");
-    		}
-			}
-    	}
-    	
-/*
-    	Person user = getPerson();
-    	if(user != null){
-    		Room room = getUserLocation(user);
-    		if(room !=null){
-    			Light light = getLightsIn(room);
-    			if(light!=null){
-    				//System.err.println("HEEEEEEEEEEEEEEEEEEEY ! LIGHT");
-    				
-    				//light.executePowerOn(new Config());
-    			}
-    		}
-    	}
-*/
+    	action.switchOnLight(getApi().things().findAll(), app);
     }
 
     @Override

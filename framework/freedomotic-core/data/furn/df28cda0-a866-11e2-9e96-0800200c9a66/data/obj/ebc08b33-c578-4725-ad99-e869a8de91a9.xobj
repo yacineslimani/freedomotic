@@ -15,7 +15,7 @@
       <active>true</active>
       <priority>-1</priority>
       <readOnly>false</readOnly>
-      <value>true</value>
+      <value>false</value>
     </com.freedomotic.model.object.BooleanBehavior>
     <com.freedomotic.model.object.RangedIntBehavior>
       <name>openness</name>
@@ -23,7 +23,7 @@
       <active>true</active>
       <priority>-1</priority>
       <readOnly>false</readOnly>
-      <value>100</value>
+      <value>0</value>
       <max>100</max>
       <min>0</min>
       <scale>1</scale>
@@ -34,7 +34,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="1203" y="769"/>
+      <offset x="1209" y="769"/>
       <rotation>0.0</rotation>
       <icon>door.png</icon>
       <fillColor>#eee9e9</fillColor>
@@ -52,7 +52,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="1203" y="769"/>
+      <offset x="1209" y="769"/>
       <rotation>25.0</rotation>
       <fillColor>#eee9e9</fillColor>
       <textColor>#000000</textColor>
@@ -69,7 +69,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="1203" y="769"/>
+      <offset x="1209" y="769"/>
       <rotation>0.0</rotation>
       <fillColor>#eee9e9</fillColor>
       <textColor>#000000</textColor>
@@ -93,6 +93,6 @@
   <triggers>
     <property name="" value="openness"/>
   </triggers>
-  <currentRepresentation>1</currentRepresentation>
+  <currentRepresentation>0</currentRepresentation>
   <envUUID>df28cda0-a866-11e2-9e96-0800200c9a66</envUUID>
 </object>

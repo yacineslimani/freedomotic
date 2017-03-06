@@ -15,7 +15,7 @@
       <active>true</active>
       <priority>-1</priority>
       <readOnly>false</readOnly>
-      <value>false</value>
+      <value>true</value>
     </com.freedomotic.model.object.BooleanBehavior>
     <com.freedomotic.model.object.RangedIntBehavior>
       <name>openness</name>
@@ -23,7 +23,7 @@
       <active>true</active>
       <priority>-1</priority>
       <readOnly>false</readOnly>
-      <value>0</value>
+      <value>100</value>
       <max>100</max>
       <min>0</min>
       <scale>1</scale>
@@ -92,6 +92,6 @@
   <triggers>
     <property name="" value="openness"/>
   </triggers>
-  <currentRepresentation>0</currentRepresentation>
+  <currentRepresentation>1</currentRepresentation>
   <envUUID>df28cda0-a866-11e2-9e96-0800200c9a66</envUUID>
 </object>
