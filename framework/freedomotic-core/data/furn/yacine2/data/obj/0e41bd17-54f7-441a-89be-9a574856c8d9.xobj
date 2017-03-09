@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <object>
-  <name>Light_adel</name>
+  <name>Light</name>
   <description>A light</description>
   <actAs>virtual</actAs>
   <type>EnvObject.ElectricDevice.Light</type>
-  <uuid>60d36102-290e-4707-afb8-6ebdeb06be9f</uuid>
+  <uuid>0e41bd17-54f7-441a-89be-9a574856c8d9</uuid>
   <hierarchy>com.freedomotic.things.impl.Light</hierarchy>
   <protocol>unknown</protocol>
   <phisicalAddress>unknown</phisicalAddress>
@@ -15,7 +15,7 @@
       <active>true</active>
       <priority>-1</priority>
       <readOnly>false</readOnly>
-      <value>true</value>
+      <value>false</value>
     </com.freedomotic.model.object.BooleanBehavior>
     <com.freedomotic.model.object.RangedIntBehavior>
       <name>brightness</name>
@@ -23,7 +23,7 @@
       <active>true</active>
       <priority>-1</priority>
       <readOnly>false</readOnly>
-      <value>100</value>
+      <value>0</value>
       <max>100</max>
       <min>0</min>
       <scale>1</scale>
@@ -46,7 +46,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="789" y="399"/>
+      <offset x="151" y="784"/>
       <rotation>0.0</rotation>
       <icon>light-off.png</icon>
       <fillColor>#000000</fillColor>
@@ -64,7 +64,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="789" y="399"/>
+      <offset x="151" y="784"/>
       <rotation>0.0</rotation>
       <icon>light-on.png</icon>
       <fillColor>#000000</fillColor>
@@ -80,9 +80,7 @@
       </shape>
     </view>
   </representation>
-  <tags>
-    <string></string>
-  </tags>
+  <tags/>
   <actions>
     <property name="turn on" value="Execute it successfully"/>
     <property name="turn off" value="Execute it successfully"/>
@@ -91,6 +89,6 @@
   <triggers>
     <property name="" value="brightness"/>
   </triggers>
-  <currentRepresentation>1</currentRepresentation>
-  <envUUID>df28cda0-a866-11e2-9e96-0800200c9a66</envUUID>
+  <currentRepresentation>0</currentRepresentation>
+  <envUUID>2c8d2aa4-f678-4fa3-b277-7d8a87ba2cdf</envUUID>
 </object>

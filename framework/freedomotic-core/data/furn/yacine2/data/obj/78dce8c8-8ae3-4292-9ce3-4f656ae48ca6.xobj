@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <object>
-  <name>Kitchen Light-145</name>
+  <name>Light-1</name>
   <description>A light</description>
   <actAs>virtual</actAs>
   <type>EnvObject.ElectricDevice.Light</type>
-  <uuid>24b01c5b-ea44-4a6e-8d89-f3f468765840</uuid>
+  <uuid>78dce8c8-8ae3-4292-9ce3-4f656ae48ca6</uuid>
   <hierarchy>com.freedomotic.things.impl.Light</hierarchy>
   <protocol>unknown</protocol>
   <phisicalAddress>unknown</phisicalAddress>
@@ -46,7 +46,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="695" y="573"/>
+      <offset x="257" y="279"/>
       <rotation>0.0</rotation>
       <icon>light-off.png</icon>
       <fillColor>#000000</fillColor>
@@ -64,7 +64,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="695" y="573"/>
+      <offset x="257" y="279"/>
       <rotation>0.0</rotation>
       <icon>light-on.png</icon>
       <fillColor>#000000</fillColor>
@@ -90,5 +90,5 @@
     <property name="" value="brightness"/>
   </triggers>
   <currentRepresentation>1</currentRepresentation>
-  <envUUID>df28cda0-a866-11e2-9e96-0800200c9a66</envUUID>
+  <envUUID>2c8d2aa4-f678-4fa3-b277-7d8a87ba2cdf</envUUID>
 </object>

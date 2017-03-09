@@ -26,5 +26,5 @@
   <delay>0</delay>
   <priority>0</priority>
   <maxExecutions>-1</maxExecutions>
-  <numberOfExecutions>5</numberOfExecutions>
+  <numberOfExecutions>0</numberOfExecutions>
 </trigger>

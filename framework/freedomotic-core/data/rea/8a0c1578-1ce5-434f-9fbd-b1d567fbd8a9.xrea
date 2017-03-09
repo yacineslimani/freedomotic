@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <reaction>
-  <trigger>When an electric device is clicked</trigger>
+  <trigger>When Air conditioner is clicked</trigger>
   <sequence>
     <command>Switch its power</command>
   </sequence>

@@ -1,5 +1,3 @@
 #Filename 		 #Reaction 			 #Description
-f3b5c3a6-67a9-486f-b53f-4bbe9bd79a0e			WHEN  [When Lights General Switch is clicked]  THEN (switch power for all lights)			When Lights General Switch is clicked then switch power for all lights
-df34682a-e123-498a-9d73-d0bb611a936a			WHEN  [When a door is clicked]  THEN (Switch its open state)			When a door is clicked then opens/closes the gate in the event
-6d0343b6-7e4f-4dbd-b173-6efba9142648			WHEN  [When an account logs in]  THEN (Create a new yacine with the same name)			When an account logs in then create a new user Thing
-70f85116-7018-4e55-8a2a-a188dddad37e			WHEN  [When an electric device is clicked]  THEN (Switch its power)			When an electric device is clicked then Object switches its power
+8a0c1578-1ce5-434f-9fbd-b1d567fbd8a9			WHEN  [When Air conditioner is clicked]  THEN (Switch its power)			When Air conditioner is clicked then Object switches its power
+6e2f9a60-7ebc-4e66-8493-642a6b649d3f			WHEN  [When an account logs in]  THEN (Create a new User with the same name)			When an account logs in then create a new user Thing

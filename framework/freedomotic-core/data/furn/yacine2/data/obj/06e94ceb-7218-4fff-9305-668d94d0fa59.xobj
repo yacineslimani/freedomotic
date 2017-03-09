@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <object>
-  <name>Bedroom door-1</name>
-  <description>Connects no rooms</description>
+  <name>Bedroom door</name>
+  <description>Connects Bedroom to Livingroom</description>
   <actAs>virtual</actAs>
   <type>EnvObject.Gate</type>
-  <uuid>422582af-bdf0-43f1-a011-095fe936c661</uuid>
+  <uuid>06e94ceb-7218-4fff-9305-668d94d0fa59</uuid>
   <hierarchy>com.freedomotic.things.impl.Gate</hierarchy>
   <protocol>unknown</protocol>
   <phisicalAddress>unknown</phisicalAddress>
@@ -34,7 +34,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="926" y="734"/>
+      <offset x="320" y="679"/>
       <rotation>0.0</rotation>
       <fillColor>#eee9e9</fillColor>
       <textColor>#000000</textColor>
@@ -51,7 +51,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="926" y="734"/>
+      <offset x="320" y="679"/>
       <rotation>25.0</rotation>
       <fillColor>#eee9e9</fillColor>
       <textColor>#000000</textColor>
@@ -68,7 +68,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="926" y="734"/>
+      <offset x="320" y="679"/>
       <rotation>0.0</rotation>
       <fillColor>#eee9e9</fillColor>
       <textColor>#000000</textColor>
@@ -93,5 +93,5 @@
     <property name="" value="openness"/>
   </triggers>
   <currentRepresentation>1</currentRepresentation>
-  <envUUID>df28cda0-a866-11e2-9e96-0800200c9a66</envUUID>
+  <envUUID>2c8d2aa4-f678-4fa3-b277-7d8a87ba2cdf</envUUID>
 </object>

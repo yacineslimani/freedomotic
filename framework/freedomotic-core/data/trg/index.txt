@@ -1,53 +1,64 @@
 #Filename 		 #TriggerName 			 #ListenedChannel
-85556940-64b5-464f-a6bb-119c63c8e222		When luminosity is greater than 20 %			app.event.sensor.luminosity
+f3b5490f-b6a0-4a77-adcd-2a16e716d2ab		When luminosity is greater than 20 %			app.event.sensor.luminosity
 a1b02741-dcbb-4919-a5ec-3aa91b8dac34		When someone enters the kitchen			app.event.sensor.person.zone.enter
-3bc4ac98-3a30-4dc9-905d-9b54f27381d2		When luminosity is less than 20 %			app.event.sensor.luminosity
+71001daa-4b0b-4348-b9d3-5b0f9059e1d4		When luminosity is less than 20 %			app.event.sensor.luminosity
 a1b02741-dcbb-4919-a5ec-3aa91b8dac34		When someone goes out of the Kitchen			app.event.sensor.person.zone.exit
-cbc3a28c-45e6-4e8f-81cd-f70ed51249c9		When temperature is less than 20 Celsius degrees			app.event.sensor.temperature
-559e6dcd-0944-4d42-8fc3-9d66deaa3930		When temperature is greater than 20 Celsius degrees			app.event.sensor.temperature
-80aaa900-e374-4ef8-9a8b-f9e9710281ed		Simulate a powered change			app.event.sensor.protocol.read.test
-93c62f0f-999a-467b-9177-374852cf4daa		Every minute			app.event.sensor.calendar.event.schedule
-3ee43de8-5761-4443-94b6-2d3a2978eb71		It's night time			app.event.sensor.calendar.event.schedule
-b0acff9c-7675-4465-b722-a04ae4e633e3		Every hour			app.event.sensor.calendar.event.schedule
-5a43c604-4301-489b-8541-185d140b920f		Every second			app.event.sensor.calendar.event.schedule
-e9cfb685-adca-4e7b-a44d-55c1d75be204		Every five seconds			app.event.sensor.calendar.event.schedule
-5f35602a-2c50-4945-b4a8-4be8aad92b7e		Every ten seconds			app.event.sensor.calendar.event.schedule
+39fca5d3-921a-4874-8031-3e74c2c7d814		When temperature is less than 20 Celsius degrees			app.event.sensor.temperature
+25228617-e0c0-429a-accd-4f33551d1d1a		When temperature is greater than 20 Celsius degrees			app.event.sensor.temperature
+fd8e01a4-1150-427f-8587-b38abf397308		Simulate a powered change			app.event.sensor.protocol.read.test
+75833bf2-a72a-4a80-a587-a86cff50c3f6		Every minute			app.event.sensor.calendar.event.schedule
+7875f27b-212e-472c-9d1a-a7caa19e0419		It's night time			app.event.sensor.calendar.event.schedule
+4850c7a4-2dfd-422a-bbfa-0a0cfab849a5		Every hour			app.event.sensor.calendar.event.schedule
+caddd5ea-f958-46f4-b08b-4b938f0d168b		Every second			app.event.sensor.calendar.event.schedule
+11c663bc-c4c9-477c-8278-d8b320c724d0		Every five seconds			app.event.sensor.calendar.event.schedule
+55fb3ec5-1aff-46be-b2d2-50dcd6402a60		Every ten seconds			app.event.sensor.calendar.event.schedule
 3a612c7a-ee61-4b44-bd05-eb9604584365		It's afternoon			app.event.sensor.calendar.event.schedule
-74ab262a-defc-458e-9ab5-55478e737295		When Lights General Switch is clicked			app.event.sensor.object.behavior.clicked
-cd46e507-b360-42a1-ad95-8f74cba7c31b		Lights General Switch turns on			app.event.sensor.object.behavior.change
-1ff5ea2b-d743-4f7f-95ca-1201750d829b		Lights General Switch turns off			app.event.sensor.object.behavior.change
-08633e61-881d-4b67-b77a-124a715ee0a8		When Light_adel is clicked			app.event.sensor.object.behavior.clicked
-16af6bd6-cd60-4bd8-9fbb-343fb53b238c		Light_adel turns on			app.event.sensor.object.behavior.change
-b37cbe8b-a58a-4793-80ac-8c7e228ba5e9		Light_adel turns off			app.event.sensor.object.behavior.change
-e29b26cb-5938-4391-a73f-f2e5e040a322		When Light Sensor is clicked			app.event.sensor.object.behavior.clicked
-9e1eeafd-ea11-4da8-b1d3-896192d8a473		When pupuch is clicked			app.event.sensor.object.behavior.clicked
-75f491a1-b03b-43c5-a9da-356ed9b7018d		When account pupuch logs in			app.event.sensor.account.change
-75cc7d4c-16b2-4803-b0f8-39830f22a056		When account pupuch logs out			app.event.sensor.account.change
-b610fbce-278e-4835-ac4c-a9208494bcf0		When Thermometer is clicked			app.event.sensor.object.behavior.clicked
-83dbd127-14e4-4b9c-9bc6-f44663774fc3		When Thermostat is clicked			app.event.sensor.object.behavior.clicked
-5553359a-4d6b-4c73-af2f-c1e61458d9a3		When Clock is clicked			app.event.sensor.object.behavior.clicked
-52bce09b-6915-4d1b-811a-0853e2ec58ab		Every one second			app.event.sensor.calendar.event.schedule
-24016373-2dad-4a6b-80bb-dca22c7bf855		Every one minute			app.event.sensor.calendar.event.schedule
-15c3f6d2-3e1e-460e-8a1c-ca049d54e616		Every minute while is morning			app.event.sensor.calendar.event.schedule
-6f03a7f3-be63-42f6-980c-948a191f507b		At 8:00AM			app.event.sensor.calendar.event.schedule
-03a8855a-80b7-4248-a3f1-2186cab42479		When Kitchen Light-145 is clicked			app.event.sensor.object.behavior.clicked
-269657d5-84ce-46a6-b92d-151073594cef		Kitchen Light-145 turns on			app.event.sensor.object.behavior.change
-d8fc9214-c45a-4851-966f-7d7a91b31ea1		Kitchen Light-145 turns off			app.event.sensor.object.behavior.change
-7ac31294-17da-4fdf-903e-86ecf7a51040		When Kitchen door is clicked			app.event.sensor.object.behavior.clicked
-c382a12f-5e74-41a5-8864-6cec7fc11740		Kitchen door becomes open			app.event.sensor.object.behavior.change
-01e9b974-7636-4a8e-9894-3bd3149159ef		Kitchen door becomes closed			app.event.sensor.object.behavior.change
-81815b29-3214-45a4-b667-6ac631920bd5		When Air conditioner is clicked			app.event.sensor.object.behavior.clicked
-7e5835b3-f5f0-4679-bb7a-d31789c05c13		Air conditioner turns on			app.event.sensor.object.behavior.change
-01fabbe4-d654-42aa-acdb-1694e39431b4		Air conditioner turns off			app.event.sensor.object.behavior.change
-84fe4d62-553e-435b-8bf9-cd244a73105a		When Bedroom door is clicked			app.event.sensor.object.behavior.clicked
-ac95f025-e773-45bf-a219-938223359980		Bedroom door becomes open			app.event.sensor.object.behavior.change
-c60f8a4f-f90a-4669-bb45-4d00f6eccfa2		Bedroom door becomes closed			app.event.sensor.object.behavior.change
-040fee65-366a-4b3a-a7d3-85ba5e76bcc2		When Door is clicked			app.event.sensor.object.behavior.clicked
-6ea5ab48-ca30-44b1-8ee7-f51e43774604		Door becomes open			app.event.sensor.object.behavior.change
-c3c4d2f0-1071-4bcd-b1e9-0285cf0ed5f7		Door becomes closed			app.event.sensor.object.behavior.change
-f19e10fc-2135-4551-a79d-26db8319118c		When Bedroom door-1 is clicked			app.event.sensor.object.behavior.clicked
-3acba1d8-fb60-4ec3-bbd4-b0421cbda761		Bedroom door-1 becomes open			app.event.sensor.object.behavior.change
-02329fa3-185b-461b-b70d-dc6a30815cf6		Bedroom door-1 becomes closed			app.event.sensor.object.behavior.change
+d091af31-9ee4-4cfe-a932-334d2200943b		When Lights General Switch is clicked			app.event.sensor.object.behavior.clicked
+8f231242-6bef-44d7-a1f6-45a2c9969dd9		Lights General Switch turns on			app.event.sensor.object.behavior.change
+ea31fa57-a2ce-4d87-b7e8-386cd7397718		Lights General Switch turns off			app.event.sensor.object.behavior.change
+2bbab673-7832-4f15-8eb5-9b5a28ba9589		When Light-1 is clicked			app.event.sensor.object.behavior.clicked
+4cca7106-9a3a-4e27-9fd1-35ee908c8d77		Light-1 turns on			app.event.sensor.object.behavior.change
+833dd191-bdc1-4be3-8ad9-d7bc3bd7121c		Light-1 turns off			app.event.sensor.object.behavior.change
+068e678e-8c5f-4972-9d9a-1d90c998cf34		When Thermometer is clicked			app.event.sensor.object.behavior.clicked
+1aab00db-a552-439a-be05-5bbae49c7ed3		When Air conditioner is clicked			app.event.sensor.object.behavior.clicked
+f84066a7-3ef6-4de9-86b4-9f2e4864bcf3		Air conditioner turns on			app.event.sensor.object.behavior.change
+05002d6f-ed91-41d5-be8b-fac9e8335bed		Air conditioner turns off			app.event.sensor.object.behavior.change
+8b9e2c04-53f4-4e62-8f6e-dfe60ec977e9		When Created by VariousSensors is clicked			app.event.sensor.object.behavior.clicked
+21818ffb-38f1-44da-8c57-80d911a21c5b		Created by VariousSensors turns on			app.event.sensor.object.behavior.change
+3119d3a1-c9df-4558-8f7a-651649eb9753		Created by VariousSensors turns off			app.event.sensor.object.behavior.change
+50ffbdee-9959-4d21-bf74-8002ad1ca395		When Thermostat is clicked			app.event.sensor.object.behavior.clicked
+a73de939-9ad3-4ef7-ac43-09bc7ef8b0a2		When Clock is clicked			app.event.sensor.object.behavior.clicked
+ef5457d1-1bf9-4eb1-9cc7-5a4092e2bb60		Every one second			app.event.sensor.calendar.event.schedule
+66c85494-95b5-48d2-ae17-c011ccba1aaa		Every one minute			app.event.sensor.calendar.event.schedule
+209ea830-46af-4e25-9d27-a1535c32ac9a		Every minute while is morning			app.event.sensor.calendar.event.schedule
+9978db54-d822-43e6-bc00-d5a91498dea2		At 8:00AM			app.event.sensor.calendar.event.schedule
+aa173449-3861-4638-8251-e663062b4386		When Kitchen Light-145 is clicked			app.event.sensor.object.behavior.clicked
+f3d70e07-f668-4f81-a4fd-b48b1c84581c		Kitchen Light-145 turns on			app.event.sensor.object.behavior.change
+dbcad6c6-d434-48d3-b734-fb51ac625620		Kitchen Light-145 turns off			app.event.sensor.object.behavior.change
+13724b72-103b-41d0-ac44-8f3c84518875		When Kitchen door is clicked			app.event.sensor.object.behavior.clicked
+0d7e8a9d-31b0-4d8a-81e8-6ed48573dbd5		Kitchen door becomes open			app.event.sensor.object.behavior.change
+df47720f-fa89-4d55-baac-5fed46ec1097		Kitchen door becomes closed			app.event.sensor.object.behavior.change
+492a3646-752f-4f63-90d8-e5a74c7214c1		When Bedroom door is clicked			app.event.sensor.object.behavior.clicked
+3b7f3401-d2c6-44e3-afd3-ef706ea68bd0		Bedroom door becomes open			app.event.sensor.object.behavior.change
+45ac9dc2-e239-44c0-99d8-7c1b134aab9f		Bedroom door becomes closed			app.event.sensor.object.behavior.change
+083bf78a-0d9b-4219-a588-c91e377ba38c		When Light-2 is clicked			app.event.sensor.object.behavior.clicked
+9ba8c190-ac0d-4b05-87d2-1d94d8124679		Light-2 turns on			app.event.sensor.object.behavior.change
+7b571545-fb69-471d-a2bb-b1d1c395d36c		Light-2 turns off			app.event.sensor.object.behavior.change
+cdc34c74-6f1e-4975-83ea-63a85dd701e2		When User is clicked			app.event.sensor.object.behavior.clicked
+ff653c21-39c7-4e1a-93d9-fa066abf601a		When account User logs in			app.event.sensor.account.change
+9ca9e7bf-5feb-4b70-80eb-ad1b719fee66		When account User logs out			app.event.sensor.account.change
+7c50dd63-e1fe-4bcb-8ee8-def42b27ad34		When Light-3 is clicked			app.event.sensor.object.behavior.clicked
+1c88fb18-70ad-4cc9-9e54-246be8f019b2		Light-3 turns on			app.event.sensor.object.behavior.change
+2885e561-42cb-4bc8-a26c-919b308142b4		Light-3 turns off			app.event.sensor.object.behavior.change
+66eddde7-7984-4ebc-83f0-f9ff4aa2c86a		When Light is clicked			app.event.sensor.object.behavior.clicked
+8c897e6e-99a4-42d7-b66e-2203a0660590		Light turns on			app.event.sensor.object.behavior.change
+87db6982-8b01-493e-b133-111d7c379081		Light turns off			app.event.sensor.object.behavior.change
+ef52f3f6-0435-412e-950c-7c3fc0254460		When Kitchen Light is clicked			app.event.sensor.object.behavior.clicked
+489ae2da-ffe6-4267-9d1c-ec6afbf7427c		Kitchen Light turns on			app.event.sensor.object.behavior.change
+1c2512f9-1ac5-4a85-9ecb-b048099d14b7		Kitchen Light turns off			app.event.sensor.object.behavior.change
+c417505b-f9a6-406d-b487-02352a0a8e9e		When Light-6 is clicked			app.event.sensor.object.behavior.clicked
+113c9edc-b3d2-4875-9035-17607ffc30b2		Light-6 turns on			app.event.sensor.object.behavior.change
+bb4fdb00-f6d9-4fd7-93e8-855f44405257		Light-6 turns off			app.event.sensor.object.behavior.change
 b935db7d-b44c-4ee5-891b-33fefdc814b4		When an electric device is clicked			app.event.sensor.object.behavior.clicked
 71b9759e-cffb-49d5-91fd-531106dc4652		When an account logs in			app.event.sensor.account.change
 a1b02741-dcbb-4919-a5ec-3aa91b8dac64		When a door is clicked			app.event.sensor.object.behavior.clicked

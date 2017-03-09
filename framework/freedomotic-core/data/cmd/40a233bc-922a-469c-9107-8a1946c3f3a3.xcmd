@@ -18,8 +18,8 @@
   <executed>false</executed>
   <properties>
     <properties>
-      <property name="object.includetags" value="useless"/>
       <property name="behavior" value="powered"/>
+      <property name="object.includetags" value="useless"/>
       <property name="value" value="false"/>
     </properties>
     <tuples/>

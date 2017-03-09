@@ -8,8 +8,8 @@ PREFIX tg:<http://www.turnguard.com/functions#>
 
 SELECT  ?user ?nom 
 WHERE {
- ?user rdf:type ns:aAllumer.
- ?user rdf:type ns:Light.
+ ?user rdf:type ns:aModifier.
+  ?user rdf:type ns:Light.
  ?user ns:hasId ?nom.
 
 }

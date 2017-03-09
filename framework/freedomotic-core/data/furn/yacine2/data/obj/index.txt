@@ -1,0 +1,17 @@
+#Filename 		 #ThingName
+873597c2-54b6-4f6e-8340-44ac9f5574a7.xobj		Thermometer
+48ce4399-cd9f-4f17-97ba-d5f39f8501f0.xobj		Air conditioner
+f8830f34-e45c-46da-be76-5b4108e67e4b.xobj		Clock
+78dce8c8-8ae3-4292-9ce3-4f656ae48ca6.xobj		Light-1
+bbfa0c74-c9b8-42d7-bdcc-5f3b898564d3.xobj		Created by VariousSensors
+06e94ceb-7218-4fff-9305-668d94d0fa59.xobj		Bedroom door
+641d9d3f-c8ad-4a9b-824e-8f7285fbe12a.xobj		Kitchen door
+a90fd2ae-3814-4884-9506-87b700680e0b.xobj		Light-2
+24b01c5b-ea44-4a6e-8d89-f3f468765840.xobj		Kitchen Light-145
+cb02d463-070b-47ac-a98d-1f0e1e95fd30.xobj		Thermostat
+d8b455b7-9883-4e82-95e3-965c35f404ba.xobj		Lights General Switch
+c8eddcf3-0219-40a2-8de8-aabebf14e75a.xobj		User
+9fee3584-0e58-4969-ad2b-2b5875162445.xobj		Light-3
+0e41bd17-54f7-441a-89be-9a574856c8d9.xobj		Light
+eea705ff-c20e-4d94-a72f-5706fd830344.xobj		Light-6
+21969e70-7e00-4a0d-a13f-a4728240d9d0.xobj		Kitchen Light

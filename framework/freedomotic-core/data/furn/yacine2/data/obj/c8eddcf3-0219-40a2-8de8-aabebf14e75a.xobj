@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <object>
-  <name>pupuch</name>
+  <name>User</name>
   <description>A user in the environment</description>
   <actAs>virtual</actAs>
   <type>EnvObject.Person.User</type>
-  <uuid>896bf89e-6211-4526-a3b6-937fb771f2b3</uuid>
+  <uuid>c8eddcf3-0219-40a2-8de8-aabebf14e75a</uuid>
   <hierarchy>com.freedomotic.things.impl.Person</hierarchy>
   <protocol>unknown</protocol>
   <phisicalAddress>unknown</phisicalAddress>
@@ -48,7 +48,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="301" y="434"/>
+      <offset x="155" y="499"/>
       <rotation>0.0</rotation>
       <icon>person.png</icon>
       <fillColor>#000000</fillColor>
@@ -66,7 +66,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="301" y="434"/>
+      <offset x="155" y="499"/>
       <rotation>0.0</rotation>
       <icon>person.png</icon>
       <fillColor>#000000</fillColor>
@@ -82,9 +82,7 @@
       </shape>
     </view>
   </representation>
-  <tags>
-    <string></string>
-  </tags>
+  <tags/>
   <actions>
     <property name="turn on" value="Execute it successfully"/>
     <property name="turn off" value="Execute it successfully"/>
@@ -93,5 +91,5 @@
     <property name="" value="powered"/>
   </triggers>
   <currentRepresentation>0</currentRepresentation>
-  <envUUID>df28cda0-a866-11e2-9e96-0800200c9a66</envUUID>
+  <envUUID>2c8d2aa4-f678-4fa3-b277-7d8a87ba2cdf</envUUID>
 </object>

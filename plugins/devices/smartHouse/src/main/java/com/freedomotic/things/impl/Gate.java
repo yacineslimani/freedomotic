@@ -51,6 +51,13 @@ public class Gate extends EnvObjectLogic implements GenericGate {
     protected BooleanBehaviorLogic open;
     protected final static String BEHAVIOR_OPEN = "open";
     protected final static String BEHAVIOR_OPENNESS = "openness";
+    
+    public void closed() {
+       setClosed(new Config());
+    }
+    public void opned() {
+       setOpen(new Config()); 
+    }
 
     @Override
     public void init() {
@@ -105,7 +112,7 @@ public class Gate extends EnvObjectLogic implements GenericGate {
      *
      * @param params
      */
-    protected void setClosed(Config params) {
+    public void setClosed(Config params) {
         boolean executed = executeCommand("close", params); //executes the developer level command associated with 'set brightness' action
 
         if (executed) {
@@ -117,12 +124,12 @@ public class Gate extends EnvObjectLogic implements GenericGate {
             setChanged(true);
         }
     }
-
+    
     /**
      *
      * @param params
      */
-    protected void setOpen(Config params) {
+   public void setOpen(Config params) {
         boolean executed = executeCommand("open", params); //executes the developer level command associated with 'set brightness' action
 
         if (executed) {

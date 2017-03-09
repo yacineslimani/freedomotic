@@ -105,7 +105,7 @@ public class Gate extends EnvObjectLogic implements GenericGate {
      *
      * @param params
      */
-    protected void setClosed(Config params) {
+    public void setClosed(Config params) {
         boolean executed = executeCommand("close", params); //executes the developer level command associated with 'set brightness' action
 
         if (executed) {
@@ -122,7 +122,7 @@ public class Gate extends EnvObjectLogic implements GenericGate {
      *
      * @param params
      */
-    protected void setOpen(Config params) {
+    public void setOpen(Config params) {
         boolean executed = executeCommand("open", params); //executes the developer level command associated with 'set brightness' action
 
         if (executed) {

@@ -5,12 +5,38 @@
 
 
 [rule1: (?per rdf:type ns:Person) (?per ns:hasLocation ?loc) (?lamp rdf:type ns:Light) (?lamp ns:hasLocation ?loc) (?fcton rdf:type ns:SwitchOn) 
-		(?fcton ns:isFunctionOf ?lamp) (?fcton ns:isEnabeled ?val) (?lamp ns:hasId ?id) (?loc ns:hasEnvironment ?env) (?env rdf:type ns:Brightness)
-		(?env ns:hasSensorValue ?envVal) lessThan(?envVal, 50) notEqual(?val,true) 
-			-> print('Allumer la Light id=',?id) (?lamp rdf:type ns:aAllumer)]
+		(?fcton ns:isFunctionOf ?lamp) (?fcton ns:isEnabeled "false"^^xsd:boolean) (?lamp ns:hasId ?id) (?loc ns:hasEnvironment ?env) (?env rdf:type ns:Brightness)
+		(?env ns:hasSensorValue ?envVal) lessThan(?envVal, 50)
+			-> print('SwitchOn Light id',?id) (?lamp rdf:type ns:aAllumer)]
+
 
 
 
 [rule2: (?lamp rdf:type ns:Light) (?lamp ns:hasLocation ?loc1)(?fcton rdf:type ns:SwitchOn) (?fcton ns:isFunctionOf ?lamp)(?fcton ns:isEnabeled ?val) 
-		(?per rdf:type ns:Person) (?per ns:hasLocation ?loc2) (?lamp ns:hasId ?id) notEqual(?val,false) notEqual(?loc1,?loc2)
-			-> print('Eteindre la Light id=',?id) (?lamp rdf:type ns:aEteindre)]
+		(?per rdf:type ns:Person) (?per ns:hasLocation ?loc2) (?lamp ns:hasId ?id) notEqual(?val,"false"^^xsd:boolean) notEqual(?loc1,?loc2)
+			-> print('SwitchOff Light id',?id) (?lamp rdf:type ns:aEteindre)]
+			
+			
+[ruleAirCon1: (?clim rdf:type ns:Aircondition) (?clim ns:hasId ?id) (?fcton rdf:type ns:SwitchOn) (?fcton ns:isFunctionOf ?clim) (?fcton ns:isEnabeled ?valfct) 
+		(?clim ns:hasLocation ?loc) (?loc ns:hasEnvironment ?env) (?env rdf:type ns:Temperature) (?env ns:hasSensorValue ?val)
+		greaterThan(?val, 20) notEqual(?valfct,"true"^^xsd:boolean)
+			-> print('SwitchOn AirCondition id',?id,'val 15') (?clim rdf:type ns:aAllumer)]
+			
+[ruleFenetre1: (?fenetre rdf:type ns:Window) (?fenetre ns:hasLocation ?loc) (?loc ns:hasEnvironment ?env) (?env rdf:type ns:Time)
+		(?env ns:hasSensorValue "10"^^xsd:double)(?fcton rdf:type ns:SwitchOn) (?fcton ns:isFunctionOf ?fenetre)
+		 (?fcton ns:isEnabeled "false"^^xsd:boolean) (?fenetre ns:hasId ?id) 
+			-> print('SwitchOn Window id',?id) (?fenetre rdf:type ns:aOuvrir) ]		
+			
+			
+			
+[ruleUserPref1: (?per rdf:type ns:Person) (?per ns:hasLocation ?loc) (?lamp rdf:type ns:Light) (?lamp ns:hasId ?id) (?lamp ns:hasLocation ?loc) 
+		(?fcton ns:isFunctionOf ?lamp)(?fcton ns:isEnabeled "true"^^xsd:boolean) (?per ns:HasBrightnessPreference ?pref)
+		(?pref ns:hasPreferenceValue "0"^^xsd:double)  -> print('Set Light id',?id,'val 30') (?lamp rdf:type ns:aModifier) ]
+
+[ruleUserPref2: (?per rdf:type ns:Person) (?per ns:hasLocation ?loc) (?lamp rdf:type ns:Light) (?lamp ns:hasId ?id) (?lamp ns:hasLocation ?loc) 
+		(?fcton ns:isFunctionOf ?lamp)(?fcton ns:isEnabeled "true"^^xsd:boolean) (?per ns:HasBrightnessPreference ?pref)
+		(?pref ns:hasPreferenceValue "1"^^xsd:double)  -> print('Set Light id',?id,'val 50') (?lamp rdf:type ns:aModifier) ]
+
+[ruleUserPref3: (?per rdf:type ns:Person) (?per ns:hasLocation ?loc) (?lamp rdf:type ns:Light) (?lamp ns:hasId ?id) (?lamp ns:hasLocation ?loc) 
+		(?fcton ns:isFunctionOf ?lamp)(?fcton ns:isEnabeled "true"^^xsd:boolean) (?per ns:HasBrightnessPreference ?pref)
+		(?pref ns:hasPreferenceValue "2"^^xsd:double)  -> print('Set Light id',?id,'val 80') (?lamp rdf:type ns:aModifier) ]	

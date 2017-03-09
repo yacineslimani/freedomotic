@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <object>
-  <name>Door</name>
-  <description>Connects no rooms</description>
+  <name>Kitchen door</name>
+  <description>Connects Livingroom to Kitchen</description>
   <actAs>virtual</actAs>
   <type>EnvObject.Gate</type>
-  <uuid>ebc08b33-c578-4725-ad99-e869a8de91a9</uuid>
+  <uuid>641d9d3f-c8ad-4a9b-824e-8f7285fbe12a</uuid>
   <hierarchy>com.freedomotic.things.impl.Gate</hierarchy>
   <protocol>unknown</protocol>
   <phisicalAddress>unknown</phisicalAddress>
@@ -15,7 +15,7 @@
       <active>true</active>
       <priority>-1</priority>
       <readOnly>false</readOnly>
-      <value>false</value>
+      <value>true</value>
     </com.freedomotic.model.object.BooleanBehavior>
     <com.freedomotic.model.object.RangedIntBehavior>
       <name>openness</name>
@@ -23,7 +23,7 @@
       <active>true</active>
       <priority>-1</priority>
       <readOnly>false</readOnly>
-      <value>0</value>
+      <value>100</value>
       <max>100</max>
       <min>0</min>
       <scale>1</scale>
@@ -34,9 +34,8 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="1209" y="769"/>
+      <offset x="785" y="727"/>
       <rotation>0.0</rotation>
-      <icon>door.png</icon>
       <fillColor>#eee9e9</fillColor>
       <textColor>#000000</textColor>
       <borderColor>#606060</borderColor>
@@ -52,7 +51,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="1209" y="769"/>
+      <offset x="785" y="727"/>
       <rotation>25.0</rotation>
       <fillColor>#eee9e9</fillColor>
       <textColor>#000000</textColor>
@@ -69,7 +68,7 @@
     <view>
       <tangible>true</tangible>
       <intersecable>false</intersecable>
-      <offset x="1209" y="769"/>
+      <offset x="785" y="727"/>
       <rotation>0.0</rotation>
       <fillColor>#eee9e9</fillColor>
       <textColor>#000000</textColor>
@@ -84,7 +83,9 @@
       </shape>
     </view>
   </representation>
-  <tags/>
+  <tags>
+    <string></string>
+  </tags>
   <actions>
     <property name="measured open" value="Execute it successfully"/>
     <property name="close" value="Execute it successfully"/>
@@ -93,6 +94,6 @@
   <triggers>
     <property name="" value="openness"/>
   </triggers>
-  <currentRepresentation>0</currentRepresentation>
-  <envUUID>df28cda0-a866-11e2-9e96-0800200c9a66</envUUID>
+  <currentRepresentation>1</currentRepresentation>
+  <envUUID>2c8d2aa4-f678-4fa3-b277-7d8a87ba2cdf</envUUID>
 </object>
